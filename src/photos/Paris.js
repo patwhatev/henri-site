@@ -5,12 +5,19 @@ import {
   HashRouter
 } from "react-router-dom";
 import Louise from "./Louise";
+import Somewhere from "./Somewhere";
 
 const paper = [
   {
     name: 'louise',
     className: 'Louise',
     id: 'louise',
+    description: 'The content, all goes, right here, : )'
+  },
+  {
+    name: 'somewhere',
+    className: 'Somewhere',
+    id: 'somewhere',
     description: 'The content, all goes, right here, : )'
   }
 ]
@@ -34,6 +41,7 @@ class PhotographsNav extends Component {
         </ul>
         <div className="sub-content">
            <Route path={'/photos/paris/louise'} component={Louise}/>
+           <Route path={'/photos/paris/somewhere'} component={Somewhere}/>
         </div>
         </div>
       </HashRouter>
