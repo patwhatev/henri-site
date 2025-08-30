@@ -10,6 +10,7 @@ const cross = [
   blank_landscape,
   blank_landscape,
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/9cf47db6-0fc1-4877-8b53-785e086be00e/cross_07.jpg?content-type=image%2Fjpeg",
+  blank_landscape,
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/890194bd-2394-45a9-b615-4f56e66a4f2c/cross_02.jpg?content-type=image%2Fjpeg",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/cdce8c66-d21d-490c-b7ed-fe80482cb8be/cross_06.jpg?content-type=image%2Fjpeg",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/dd1f6cbb-2c43-4ebb-8a57-01ee2e537e3c/cross_01.jpg?content-type=image%2Fjpeg",
