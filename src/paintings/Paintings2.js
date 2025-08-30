@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from "react";
 
 const imgs = [
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/d119888d-5c8f-4281-8986-21926d651e72/8654-32a.JPG?content-type=image%2Fjpeg"
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/8d8784d9-a2e4-482c-9b7f-adfdcb2446a7/1756596105744-6bb84278-6821-4545-8838-7ea614fa3a6d_1.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/2fd46325-317f-4b55-8be8-1cdd3629a362/1756596105744-6bb84278-6821-4545-8838-7ea614fa3a6d_2.png?content-type=image%2Fpng",
 ] 
 class Paintings2
  extends Component {
