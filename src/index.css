@@ -127,6 +127,32 @@ img {
   margin-bottom: 10px;
 }
 
+.photo-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Adjust spacing between images */
+}
+
+.photo-grid-item {
+  width: 100%;
+  height: auto;
+  margin: 30px 0 !important;
+  object-fit: cover; /* This ensures images maintain aspect ratio */
+}
+
+/* Optional: Make it responsive */
+@media (max-width: 768px) {
+  .photo-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-grid-container {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+
 
 /*MOBILE SHIT*/
 @media only screen and (max-width: 600px) {
