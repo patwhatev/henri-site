@@ -4,14 +4,19 @@ import Carousel from 'react-bootstrap/Carousel'
 
 const blank_landscape = "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/719bc236-a977-4ba8-b413-41e3b40db5f8/blank+landscape.png?content-type=image%2Fpng"
 
-const cross1 = "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/d5af81ea-acbd-403c-ac58-7b2ff63a6acf/8653-32a.JPG?content-type=image%2Fjpeg";
-const cross2 = "";
-const cross3 = "";
-const cross4 = "";
-const cross5 = "";
-const cross6 = "";
-
-const cross_grid = [cross1, blank_landscape, blank_landscape, cross2, blank_landscape, cross3, cross4, cross5, blank_landscape, cross6, blank_landscape]
+const cross = [
+  blank_landscape,
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/341cde87-640d-46e4-bfe0-03e0be7daf25/cross_04.jpg?content-type=image%2Fjpeg",
+  blank_landscape,
+  blank_landscape,
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/9cf47db6-0fc1-4877-8b53-785e086be00e/cross_07.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/890194bd-2394-45a9-b615-4f56e66a4f2c/cross_02.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/cdce8c66-d21d-490c-b7ed-fe80482cb8be/cross_06.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/dd1f6cbb-2c43-4ebb-8a57-01ee2e537e3c/cross_01.jpg?content-type=image%2Fjpeg",
+  blank_landscape,
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/2acf494a-937d-4f3b-bae0-8ed0f29c0c6e/cross_05.jpg?content-type=image%2Fjpeg",
+  blank_landscape
+]
 
 const page1 = [
     "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/780472b1-cc0f-45bd-bff1-0831cff686b6/8652-28a.JPG?content-type=image%2Fjpeg",
@@ -83,8 +88,7 @@ const page4 = [
   "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5d9bfe1d891ec13e8f7d9642/5d9bfea018af836bfce96563/1570504363436/WEBSITE+COVER+PHOTO.TIF-7.png?format=1500w"
 ];
 
-
-const imgs = [page1, page2, page3, page4]
+const imgs = [cross, page1, page2, page3, page4]
 // Note - this page does not have a nav
 
 class Photographs

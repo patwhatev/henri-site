@@ -13,22 +13,16 @@ const paintings = [
     description: 'description goes here'
   },
   {
+    name: 'Paintings',
+    className: 'Paintings2',
+    id: 'paintings2',
+    description: 'description goes here'
+  },
+  {
     name: 'Graphs',
     className: 'Graphs',
     id: 'graphs',
     description: 'description goes here'
-  },
-  {
-    name: 'Valet',
-    className: 'Valet',
-    id: 'valet',
-    description: 'description goes here'
-  },
-  {
-    name: 'Heroin',
-    className: 'Heroin',
-    id: 'heroin',
-    description: 'some other stuff'
   }
 ]
 

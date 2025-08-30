@@ -5,7 +5,7 @@ import PaintingsNav from "./PaintingsNav";
 import BlackPaintings from "./BlackPaintings";
 import Graphs from "./Graphs";
 import Heroin from "./Heroin";
-import Valet from "./Valet";
+import Paintings2 from "./Paintings2";
 
 const landingImage = "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/892f38c7-6858-43b0-9ad8-e4c1e2c26260/VIKS1131.jpg?content-type=image%2Fjpeg";
 
@@ -27,7 +27,7 @@ class Paintings extends Component {
           <Route path="/paintings/black-paintings" component={BlackPaintings} />
           <Route path="/paintings/graphs" component={Graphs} />
           <Route path="/paintings/heroin" component={Heroin} />
-          <Route path="/paintings/valet" component={Valet} />
+          <Route path="/paintings/paintings2" component={Paintings2} />
         </Switch>
       </div>
     );

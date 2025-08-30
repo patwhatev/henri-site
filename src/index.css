@@ -1,6 +1,6 @@
 body {
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   margin: 0;
 }
 h1, h2, p, ul, li {
@@ -20,11 +20,13 @@ ul.header {
   text-align: center;
   padding: 0;
 }
+
+/* nav stuff */
 ul.header li a, h1 a {
   color: #EEE;
   font-weight: bold;
   text-decoration: none;
-  padding: 20px;
+  padding: 12px;
   display: inline-block;
 }
 
@@ -33,7 +35,8 @@ h1 a {
   font-size: .7em;
 }
 
-h1 a:hover {
+/* sub-navigation */
+.header li a, h1 a:hover {
   text-decoration: none;
   color:#999;
 }
@@ -41,6 +44,16 @@ h1 a:hover {
 .content{
    width: 80%;
    margin: auto;
+}
+
+.content li a{
+  font-size: 12px;
+  margin-top: -35px;
+}
+
+.content li a:hover{
+  color: #999;
+  
 }
 
 .carousel-control-prev-icon,

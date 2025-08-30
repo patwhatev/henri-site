@@ -3,9 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from "react";
 
 const imgs = [
-	"https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5d9f50a51fc08962a642c98a/5d9f50a502898f0055cbe8d9/1570721966884/XoCi9rgg.jpeg?format=1500w"
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/d119888d-5c8f-4281-8986-21926d651e72/8654-32a.JPG?content-type=image%2Fjpeg"
 ] 
-class Valet
+class Paintings2
  extends Component {
   render() {
     return (
@@ -22,5 +22,5 @@ class Valet
   }
 }
  
-export default Valet
+export default Paintings2
 ;
