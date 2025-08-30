@@ -1,25 +1,21 @@
 import React, { Component } from "react";
 import {
+  Route,
   NavLink,
   HashRouter
 } from "react-router-dom";
+import La from "./La";
 
 const paper = [
   {
-    name: '2016 - 2020',
-    className: 'Paper2016to2020',
-    id: '2016-2020',
+    name: 'los angeles',
+    className: 'La',
+    id: 'la',
     description: 'description goes here'
   },
-  {
-    name: '2021 - 2025',
-    className: 'Paper2021to2025',
-    id: '2021-2025',
-    description: 'some other stuff'
-  }
 ]
 
-class PaperNav extends Component {
+class AssemblageNav extends Component {
 	constructor({match}) {
 		super();
 		this.match = this.props;
@@ -32,14 +28,17 @@ class PaperNav extends Component {
           <ul>
   		    {paper.map(({ name, id }) => (
   		      <li key={id}>
-  		        <NavLink to={`/paper/${id}`}>{name}</NavLink>
+  		        <NavLink to={`/assemblage/${id}`}>{name}</NavLink>
   		      </li>
   		    ))}
   		  </ul>
+  		  <div className="sub-content">
+           <Route path={'/assemblage/la'} component={La}/>
+  		  </div>
         </div>
       </HashRouter>
     );
   }
 }
  
-export default PaperNav;
+export default AssemblageNav;

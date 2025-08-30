@@ -14,13 +14,13 @@ const paper = [
     name: 'hollywood hills',
     className: 'Hollywood',
     id: 'hollywood',
-    description: 'The content, all goes, right here, : )'
+    description: 'description goes here'
   },
   {
     name: 'backyard metal show',
     className: 'Metal',
     id: 'metal',
-    description: 'The content, all goes, right here, : )',
+    description: 'description goes here',
     resources: [
       'https://miro.medium.com/max/10944/1*9wHrewC1Dyf2Au_qEqwWcg.jpeg'
     ]
@@ -29,13 +29,13 @@ const paper = [
     name: 'perris speedway',
     className: 'Perris',
     id: 'perris',
-    description: 'The content, all goes, right here, : )',
+    description: 'description goes here',
   },
   {
     name: 'studio',
     className: 'Studio',
     id: 'studio',
-    description: 'The content, all goes, right here, : )',
+    description: 'description goes here',
   }
 ]
 

@@ -11,7 +11,7 @@ const paper = [
     name: 'eden roc',
     className: 'Eden',
     id: 'eden',
-    description: 'The content, all goes, right here, : )'
+    description: 'description goes here'
   }
 ]
 

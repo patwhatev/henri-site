@@ -11,7 +11,7 @@ const paper = [
     name: 'Korean punkband tile floors and cops',
     className: 'Korean',
     id: 'korean',
-    description: 'The content, all goes, right here, : )'
+    description: 'description goes here'
   }
 ]
 

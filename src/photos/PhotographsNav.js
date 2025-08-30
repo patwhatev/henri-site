@@ -14,25 +14,25 @@ const paper = [
     name: 'los angeles',
     className: 'La',
     id: 'la',
-    description: 'The content, all goes, right here, : )'
+    description: 'description goes here'
   },
   {
     name: 'st. tropez',
     className: 'St',
     id: 'st',
-    description: 'The content, all goes, right here, : )'
+    description: 'description goes here'
   },
   {
     name: 'austin, tx',
     className: 'At',
     id: 'at',
-    description: 'The content, all goes, right here, : )'
+    description: 'description goes here'
   },
   {
     name: 'paris',
     className: 'Paris',
     id: 'paris',
-    description: 'The content, all goes, right here, : )'
+    description: 'description goes here'
   }
 ]
 

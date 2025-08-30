@@ -1,25 +1,28 @@
 import React, { Component } from "react";
 import {
-  Route,
   NavLink,
   HashRouter
 } from "react-router-dom";
-import Graphs from "./Graphs";
-import Heroin from "./Heroin";
-import Valet from "./Valet";
+
 
 const paintings = [
+  {
+    name: 'Black Paintings',
+    className: 'BlackPaintings',
+    id: 'black-paintings',
+    description: 'description goes here'
+  },
   {
     name: 'Graphs',
     className: 'Graphs',
     id: 'graphs',
-    description: 'The content, all goes, right here, : )'
+    description: 'description goes here'
   },
   {
     name: 'Valet',
     className: 'Valet',
     id: 'valet',
-    description: 'The content, all goes, right here, : )'
+    description: 'description goes here'
   },
   {
     name: 'Heroin',
@@ -46,11 +49,6 @@ class PaintingsNav extends Component {
   		      </li>
   		    ))}
   		  </ul>
-  		  <div className="sub-content">
-  		     <Route path={'/paintings/graphs'} component={Graphs}/>
-  		     <Route path={'/paintings/valet'} component={Valet}/>
-  		     <Route path={'/paintings/heroin'} component={Heroin}/>
-  		  </div>
         </div>
       </HashRouter>
     );

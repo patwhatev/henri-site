@@ -14,7 +14,7 @@ const videos = [
     name: 'Aluminum Tastes Like Fear Trailer',
     className: 'Aluminum',
     id: 'aluminum',
-    description: 'The content, all goes, right here, : )',
+    description: 'description goes here',
     resources: [
       'https://miro.medium.com/max/10944/1*9wHrewC1Dyf2Au_qEqwWcg.jpeg'
     ]
@@ -23,7 +23,7 @@ const videos = [
     name: 'Government',
     className: 'Government',
     id: 'government',
-    description: 'The content, all goes, right here, : )',
+    description: 'description goes here',
     resources: [
       'https://miro.medium.com/max/10944/1*9wHrewC1Dyf2Au_qEqwWcg.jpeg'
     ]
@@ -32,7 +32,7 @@ const videos = [
     name: 'Paris',
     className: 'Paris',
     id: 'paris',
-    description: 'The content, all goes, right here, : )',
+    description: 'description goes here',
     resources: [
       'https://miro.medium.com/max/10944/1*9wHrewC1Dyf2Au_qEqwWcg.jpeg'
     ]
@@ -41,7 +41,7 @@ const videos = [
     name: 'Stokholm',
     className: 'Stokholm',
     id: 'stokholm',
-    description: 'The content, all goes, right here, : )',
+    description: 'description goes here',
     resources: [
       'https://miro.medium.com/max/10944/1*9wHrewC1Dyf2Au_qEqwWcg.jpeg'
     ]

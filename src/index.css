@@ -115,6 +115,10 @@ img {
   width: 100%;
 }
 
+.scrolldown-img {
+  padding: 15px 200px;
+}
+
 .active {
   color: #111 !important;
 }

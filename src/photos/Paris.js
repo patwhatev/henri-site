@@ -12,13 +12,13 @@ const paper = [
     name: 'louise',
     className: 'Louise',
     id: 'louise',
-    description: 'The content, all goes, right here, : )'
+    description: 'description goes here'
   },
   {
     name: 'somewhere',
     className: 'Somewhere',
     id: 'somewhere',
-    description: 'The content, all goes, right here, : )'
+    description: 'description goes here'
   }
 ]
 

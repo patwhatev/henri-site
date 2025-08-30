@@ -1,20 +1,23 @@
 import React, { Component } from "react";
 import {
-  Route,
   NavLink,
   HashRouter
 } from "react-router-dom";
-import Rkr from "./Rkr";
 
 const books = [
+  {
+    name: 'Dictatorship',
+    className: 'Dictatorship',
+    id: 'dictatorship',
+    description: 'description goes here'
+  },
   {
     name: 'Reverse Keith Richards',
     className: 'Rkr',
     id: 'rkr',
-    description: 'The content, all goes, right here, : )',
-    resources: [
-    ]
+    description: 'description goes here'
   }
+
 ]
 
 class BooksNav extends Component {
@@ -34,9 +37,6 @@ class BooksNav extends Component {
   		      </li>
   		    ))}
   		  </ul>
-  		  <div className="sub-content">
-  		     <Route exact path={'/#/books/rkr'} component={Rkr}/>
-  		  </div>
         </div>
       </HashRouter>
     );
