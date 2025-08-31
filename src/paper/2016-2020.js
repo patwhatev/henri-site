@@ -3,32 +3,33 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from "react";
 
 const imgs = [
-     "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5da66f34ffea006e2c4bf640/5da6774d9e99bd6c95b57592/1571190622056/50+part+2.png?format=1500w",
-     "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5da66f34ffea006e2c4bf640/5da6774a969104796c2b6ec7/1571190613072/50.png?format=1500w",
-     "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5da66f34ffea006e2c4bf640/5da6774a2f46d156f8965e66/1571190618964/51.png?format=1500w",
-     "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5d9bfe1d891ec13e8f7d9642/5d9bfe2a7161583d7ba0f89a/1570504257722/16.jpg.png?format=1500w",
-      "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5d9bfe1d891ec13e8f7d9642/5d9bfe29b3de004d53e534bf/1570504256923/11.jpg.png?format=1500w",
-      "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5d9bfe1d891ec13e8f7d9642/5d9bfe1ee77d8a0f62506200/1570504243991/2.jpg.png?format=1500w",
-      "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5d9bfe1d891ec13e8f7d9642/5d9bfe1d18af836bfce95bb2/1570504248053/17.jpg.png?format=1500w",
-      "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5da66f34ffea006e2c4bf640/5da67345969104796c2b17ca/1571189592456/DSC_6739.png?format=1500w",
-     "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5da66f34ffea006e2c4bf640/5da673452cbaed1e3951c44a/1571189601130/19.png?format=1500w",
-     "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5da66f34ffea006e2c4bf640/5da6734cffea006e2c4c58a5/1571189602774/31.png?format=1500w",
-     "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5da66f34ffea006e2c4bf640/5da673539e99bd6c95b518f5/1571189609486/DSC_6741.png?format=1500w",
-     "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5da66f34ffea006e2c4bf640/5da673579e99bd6c95b5194f/1571189612362/DSC_6740.png?format=1500w"
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/2ee0cca4-8d21-4102-9e15-a37d3af0d2fb/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_1.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/528987ff-6a4d-47cf-b410-db86dbcfbe63/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_2.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/d75b283f-a214-4c9b-b33f-374a5ac1ed6f/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_3.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/f0274c0f-29cc-42ba-8eaa-7289d9f6efe4/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_4.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/483b2010-3835-41e2-adaa-c5d25add31b7/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_5.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/9d4d596e-3668-4015-bab3-6a54a02c75f0/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_6.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/d621cc58-1360-495c-8506-bdb4942cb95d/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_7.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/25023bbd-6f11-4eb8-b61a-963632dcde70/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_8.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/91d72291-02aa-4ef6-8a0f-7f09a1869a86/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_9.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/ec8ad3e3-a535-4c9f-89e4-92705d14771d/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_10.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/e55a6fb5-4a41-4e57-be01-fce7d796da19/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_11.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/e497e3a4-467c-4307-b843-3d65da2e0dba/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_12.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/400aff75-2c1f-4076-b3d5-272e58a6427a/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_13.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/cd12eec7-6bae-4e96-82cc-29f796bcefbd/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_14.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/786f1d49-40d3-4f4a-b904-cce6cfbfc421/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_15.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/0255fd72-1084-441c-a348-782d621b8df2/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_16.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/aceaef8a-01e7-4d85-900b-68c36ffa2f43/1756599537401-42ce0fe5-c689-42f3-ba17-a617bb16b63d_17.png?content-type=image%2Fpng"
+];
 
-] 
 class Paper2016to2020
  extends Component {
   render() {
     return (
       <div>
-        <Carousel>
           {imgs.map(image => (
-            <Carousel.Item>
               <img className="d-block w-100" src={image} alt="" />
-            </Carousel.Item>
           ))}         
-        </Carousel>
       </div>
     );
   }
