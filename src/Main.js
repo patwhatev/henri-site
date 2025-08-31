@@ -13,6 +13,7 @@ import Paper from "./paper/Paper";
 import Photographs from "./photos/Photographs";
 import Sculpture from "./sculpture/Sculpture";
 import Assemblage from "./assemblage/Assemblage";
+import Instrumentals from "./instrumentals/Instrumentals";
 
 class Main extends Component {
   render() {
@@ -28,6 +29,7 @@ class Main extends Component {
             <li><NavLink to="/photos">Photographs</NavLink></li>
             <li><NavLink to="/sculpture">Sculpture/Furniture</NavLink></li>
             <li><NavLink to="/books">Books/Zines</NavLink></li>
+            <li><NavLink to="/instrumentals">Instrumentals</NavLink></li>
           </ul>
           <div className="content">
              <Route exact path="/" component={Home}/>
@@ -37,6 +39,7 @@ class Main extends Component {
              <Route path="/photos" component={Photographs}/>
              <Route path="/sculpture" component={Sculpture}/>
              <Route path="/books" component={Books}/>
+             <Route path="/instrumentals" component={Instrumentals}/>
           </div>
         </div>
       </HashRouter>
