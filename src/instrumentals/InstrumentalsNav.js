@@ -20,7 +20,7 @@ const instrumentals = [
 
 ]
 
-class BooksNav extends Component {
+class InstrumentalsNav extends Component {
 	constructor({match}) {
 		super();
 		this.match = this.props;
@@ -31,9 +31,9 @@ class BooksNav extends Component {
         <>
         <div>
           <ul>
-  		    {books.map(({ name, id }) => (
+  		    {instrumentals.map(({ name, id }) => (
   		      <li key={id}>
-  		        <NavLink to={`/books/${id}`}>{name}</NavLink>
+  		        <NavLink to={`/instrumentals/${id}`}>{name}</NavLink>
   		      </li>
   		    ))}
   		  </ul>
@@ -43,4 +43,4 @@ class BooksNav extends Component {
   }
 }
  
-export default BooksNav;
+export default InstrumentalsNav;
