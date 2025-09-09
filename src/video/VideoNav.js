@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import {
+  Routes,
   Route,
   NavLink,
-  HashRouter
+  
 } from "react-router-dom";
 import Aluminum from "./Aluminum";
 import Government from "./Government";
@@ -56,7 +57,7 @@ class VideoNav extends Component {
 
   render() {
     return (
-        <HashRouter>
+        <>
         <div>
           <ul>
   		    {videos.map(({ name, id }) => (
@@ -66,13 +67,15 @@ class VideoNav extends Component {
   		    ))}
   		  </ul>
   		  <div className="sub-content">
-  		     <Route path={'/videos/aluminum'} component={Aluminum}/>
-  		     <Route path={'/videos/government'} component={Government}/>
-  		     <Route path={'/videos/paris'} component={Paris}/>
-  		     <Route path={'/videos/stokholm'} component={Stokholm}/>
+           <Routes>
+             <Route path="aluminum" element={<Aluminum />} />
+             <Route path="government" element={<Government />} />
+             <Route path="paris" element={<Paris />} />
+             <Route path="stokholm" element={<Stokholm />} />
+           </Routes>
   		  </div>
         </div>
-      </HashRouter>
+      </>
     );
   }
 }

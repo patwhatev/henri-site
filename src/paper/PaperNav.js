@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
-  NavLink,
-  HashRouter
+  NavLink
 } from "react-router-dom";
 
 const paper = [
@@ -27,7 +26,6 @@ class PaperNav extends Component {
 
   render() {
     return (
-        <HashRouter>
         <div>
           <ul>
   		    {paper.map(({ name, id }) => (
@@ -37,7 +35,6 @@ class PaperNav extends Component {
   		    ))}
   		  </ul>
         </div>
-      </HashRouter>
     );
   }
 }

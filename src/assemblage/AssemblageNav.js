@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import {
+  Routes,
   Route,
   NavLink,
-  HashRouter
+  
 } from "react-router-dom";
 import La from "./La";
 
@@ -23,7 +24,7 @@ class AssemblageNav extends Component {
 
   render() {
     return (
-        <HashRouter>
+        <>
         <div>
           <ul>
   		    {paper.map(({ name, id }) => (
@@ -33,10 +34,12 @@ class AssemblageNav extends Component {
   		    ))}
   		  </ul>
   		  <div className="sub-content">
-           <Route path={'/assemblage/la'} component={La}/>
+           <Routes>
+             <Route path="la" element={<La />} />
+           </Routes>
   		  </div>
         </div>
-      </HashRouter>
+      </>
     );
   }
 }

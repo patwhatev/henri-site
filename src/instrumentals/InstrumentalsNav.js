@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {
   NavLink,
-  HashRouter
+  
 } from "react-router-dom";
 
 const instrumentals = [
@@ -28,7 +28,7 @@ class BooksNav extends Component {
 
   render() {
     return (
-        <HashRouter>
+        <>
         <div>
           <ul>
   		    {books.map(({ name, id }) => (
@@ -38,7 +38,7 @@ class BooksNav extends Component {
   		    ))}
   		  </ul>
         </div>
-      </HashRouter>
+      </>
     );
   }
 }

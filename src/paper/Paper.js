@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import PaperNav from "./PaperNav";
 import Paper2016to2020 from "./2016-2020";
@@ -15,19 +15,19 @@ class Paper
       <div className="content">
         <PaperNav/>
         
-        <Switch>
+        <Routes>
           {/* Landing page route - shows when at /paper exactly */}
-          <Route exact path="/paper" render={() => (
+          <Route index element={(
             <div>
               <img className="d-block w-100" src={landingImage} alt="Paper landing image" />
             </div>
           )} />
           
           {/* Sub-page routes - show carousels without landing image */}
-          <Route path="/paper/2016-2020" component={Paper2016to2020} />
-          <Route path="/paper/2021-2025" component={Paper2021to2025} />
+          <Route path="2016-2020" element={<Paper2016to2020 />} />
+          <Route path="2021-2025" element={<Paper2021to2025 />} />
           {/* Add more sub-routes as needed */}
-        </Switch>
+        </Routes>
       </div>
     );
   }

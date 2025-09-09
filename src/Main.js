@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {
+  Routes,
   Route,
   NavLink,
   HashRouter
@@ -32,14 +33,16 @@ class Main extends Component {
             {/* <li><NavLink to="/instrumentals">Instrumentals</NavLink></li> */}
           </ul>
           <div className="content">
-             <Route exact path="/" component={Home}/>
-             <Route path="/paintings" component={Paintings}/>
-             <Route path="/assemblage" component={Assemblage}/>
-             <Route path="/paper" component={Paper}/>
-             <Route path="/photos" component={Photographs}/>
-             <Route path="/sculpture" component={Sculpture}/>
-             <Route path="/books" component={Books}/>
-             {/* <Route path="/instrumentals" component={Instrumentals}/> */}
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/paintings/*" element={<Paintings />} />
+              <Route path="/assemblage/*" element={<Assemblage />} />
+              <Route path="/paper/*" element={<Paper />} />
+              <Route path="/photos/*" element={<Photographs />} />
+              <Route path="/sculpture/*" element={<Sculpture />} />
+              <Route path="/books/*" element={<Books />} />
+              {/* <Route path="/instrumentals/*" element={<Instrumentals />} /> */}
+            </Routes>
           </div>
         </div>
       </HashRouter>

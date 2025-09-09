@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {
   Route,
   NavLink,
-  HashRouter
+  
 } from "react-router-dom";
 import Korean from "./Korean";
 
@@ -23,7 +23,7 @@ class PhotographsNav extends Component {
 
   render() {
     return (
-        <HashRouter>
+        <>
         <div>
           <ul>
           {paper.map(({ name, id }) => (
@@ -36,7 +36,7 @@ class PhotographsNav extends Component {
            <Route path={'/photos/at/korean'} component={Korean}/>
         </div>
         </div>
-      </HashRouter>
+      </>
     );
   }
 }

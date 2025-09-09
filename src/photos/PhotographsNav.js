@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import {
-  Route,
-  NavLink,
-  HashRouter
+  NavLink
 } from "react-router-dom";
 import La from "./La";
 import St from "./St";
@@ -44,7 +42,6 @@ class PhotographsNav extends Component {
 
   render() {
     return (
-        <HashRouter>
         <div>
           <ul>
   		    {paper.map(({ name, id }) => (
@@ -53,14 +50,7 @@ class PhotographsNav extends Component {
   		      </li>
   		    ))}
   		  </ul>
-  		  <div className="sub-content">
-           <Route path={'/photos/la'} component={La}/>
-           <Route path={'/photos/st'} component={St}/>
-           <Route path={'/photos/at'} component={At}/>
-           <Route path={'/photos/paris'} component={Paris}/>
-  		  </div>
         </div>
-      </HashRouter>
     );
   }
 }

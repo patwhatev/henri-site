@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import PaintingsNav from "./PaintingsNav";
 import BlackPaintings from "./BlackPaintings";
@@ -15,20 +15,20 @@ class Paintings extends Component {
       <div className="content">
         <PaintingsNav/>
         
-        <Switch>
-          {/* Landing page route - shows when at /books exactly */}
-          <Route exact path="/paintings" render={() => (
+        <Routes>
+          {/* Landing page route - shows when at /paintings exactly */}
+          <Route index element={(
             <div>
               <img className="d-block w-100" src={landingImage} alt="Paintings landing image" />
             </div>
           )} />
           
           {/* Sub-page routes - show carousels without landing image */}
-          <Route path="/paintings/black-paintings" component={BlackPaintings} />
-          <Route path="/paintings/graphs" component={Graphs} />
-          <Route path="/paintings/heroin" component={Heroin} />
-          <Route path="/paintings/paintings2" component={Paintings2} />
-        </Switch>
+          <Route path="black-paintings" element={<BlackPaintings />} />
+          <Route path="graphs" element={<Graphs />} />
+          <Route path="heroin" element={<Heroin />} />
+          <Route path="paintings2" element={<Paintings2 />} />
+        </Routes>
       </div>
     );
   }

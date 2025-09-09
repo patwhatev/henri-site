@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import SculptureNav from "./SculptureNav";
 import Chaises from "./Chaises";
@@ -16,21 +16,21 @@ class Sculpture extends Component {
       <div className="content">
         <SculptureNav/>
         
-        <Switch>
-          {/* Landing page route - shows when at /books exactly */}
-          <Route exact path="/sculpture" render={() => (
+        <Routes>
+          {/* Landing page route - shows when at /sculpture exactly */}
+          <Route index element={(
             <div>
               <img className="d-block w-100" src={landingImage} alt="Books landing image" />
             </div>
           )} />
           
           {/* Sub-page routes - show carousels without landing image */}
-          <Route path="/sculpture/cages" component={Cages} />
-          <Route path="/sculpture/chaises" component={Chaises} />
-          <Route path="/sculpture/narcan-car" component={NarcanCar} />
-          <Route path="/sculpture/synthesizer-prison-unit" component={SynthesizerPrisonUnit} />
-          <Route path="/sculpture/chaise-manteau" component={ChaiseManteau} />
-        </Switch>
+          <Route path="cages" element={<Cages />} />
+          <Route path="chaises" element={<Chaises />} />
+          <Route path="narcan-car" element={<NarcanCar />} />
+          <Route path="synthesizer-prison-unit" element={<SynthesizerPrisonUnit />} />
+          <Route path="chaise-manteau" element={<ChaiseManteau />} />
+        </Routes>
       </div>
     );
   }

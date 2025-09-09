@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import Carousel from 'react-bootstrap/Carousel'
+import { Routes, Route } from "react-router-dom";
+import Carousel from 'react-bootstrap/Carousel';
+
+import PhotographsNav from "./PhotographsNav";
+import La from "./La";
+import St from "./St";
+import At from "./At";
+import Paris from "./Paris";
 
 
 const blank_landscape = "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/719bc236-a977-4ba8-b413-41e3b40db5f8/blank+landscape.png?content-type=image%2Fpng"
@@ -99,13 +106,19 @@ class Photographs
     const allImages = imgs.flat();
     return (
       <div className="content">
-       <div className="photo-grid-container">
-          {allImages.map((image, index) => (
-            <div key={index}>
-              <img className="photo-grid-item" src={image} alt="" />
+        {/* <PhotographsNav /> */}
+        
+        <Routes>
+          <Route index element={(
+            <div className="photo-grid-container">
+              {allImages.map((image, index) => (
+                <div key={index}>
+                  <img className="photo-grid-item" src={image} alt="" />
+                </div>
+              ))}         
             </div>
-          ))}         
-        </div>
+          )} />
+        </Routes>
       </div>
     );
   }

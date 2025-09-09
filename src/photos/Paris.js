@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {
   Route,
   NavLink,
-  HashRouter
+  
 } from "react-router-dom";
 import Louise from "./Louise";
 import Somewhere from "./Somewhere";
@@ -30,7 +30,7 @@ class PhotographsNav extends Component {
 
   render() {
     return (
-        <HashRouter>
+        <>
         <div>
           <ul>
           {paper.map(({ name, id }) => (
@@ -44,7 +44,7 @@ class PhotographsNav extends Component {
            <Route path={'/photos/paris/somewhere'} component={Somewhere}/>
         </div>
         </div>
-      </HashRouter>
+      </>
     );
   }
 }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
-  NavLink,
-  HashRouter
+  NavLink
 } from "react-router-dom";
 
 
@@ -34,7 +33,6 @@ class PaintingsNav extends Component {
 
   render() {
     return (
-        <HashRouter>
         <div>
           <ul>
   		    {paintings.map(({ name, id }) => (
@@ -44,7 +42,6 @@ class PaintingsNav extends Component {
   		    ))}
   		  </ul>
         </div>
-      </HashRouter>
     );
   }
 }
