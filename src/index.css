@@ -293,4 +293,9 @@ img {
     width: 100%;
     text-align: center;
   }
+
+  /* Hide blank landscape images on mobile */
+  .photo-grid-item[src*="blank+landscape.png"] {
+    display: none !important;
+  }
 }
