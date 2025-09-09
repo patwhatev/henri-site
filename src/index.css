@@ -42,7 +42,7 @@ h1 a {
 }
 
 .content{
-   width: 80%;
+   width: 90%;
    margin: auto;
 }
 
@@ -91,7 +91,7 @@ h1 a {
 }
 
 .content li a {
-  color: #EEE;
+  color: #bbb;
   font-weight: bold;
   text-decoration: none;
   padding: 16px;
@@ -106,7 +106,7 @@ h1 a {
 
 /* Sub-navigation horizontal layout */
 .content ul {
-  width: 64%;
+  width: 90%;
   margin: 0 auto;
   padding: 16px 0;
   display: flex;
