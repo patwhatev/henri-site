@@ -5,7 +5,7 @@ import {
 
 const paper = [
   {
-    name: '2016 - 2020',
+    name: '2016 - 2019',
     className: 'Paper2016to2020',
     id: '2016-2020',
     description: 'description goes here'

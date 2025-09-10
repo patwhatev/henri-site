@@ -55,6 +55,15 @@ const page1 = [
 
 const page2 = [
   blank_landscape,
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/b6e5072b-e204-4fa4-aadd-67092c952a18/IMG_5991.png?content-type=image%2Fpng",
+  blank_landscape,
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/90a85efc-e329-4d0d-a07b-eda22fba885f/IMG_5990.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/7fc40909-bb0e-4c39-ba2d-7ad4ad089993/IMG3889-R01-010A.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/96f3178a-828c-4756-8fc4-ba930d7ce4a0/IMG3889-R01-027A.png?content-type=image%2Fpng",
+  blank_landscape,
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/b05b857a-cdf7-4be4-ab8a-a15447167452/IMG_5996.png?content-type=image%2Fpng",
+  blank_landscape,
+  blank_landscape,
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/5a796b4e-7658-4c3c-8b66-56df94ba0b31/9134-03a.JPG?content-type=image%2Fjpeg",
   blank_landscape,
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/a7d0792b-ec14-41bc-8194-e2359d721320/9134-21a.JPG?content-type=image%2Fjpeg",
