@@ -133,10 +133,19 @@ h1 a {
   margin: 0;
 }
 
+.d-block {
+  max-width: 90%;
+}
+
 
 img {
   height: 100%;
   width: 100%;
+}
+
+.paper-21 img {
+  max-width: 800px;
+  text-align: center;
 }
 
 .scrolldown-img {

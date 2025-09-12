@@ -37,16 +37,16 @@ const pe_18_zine = [
 ]
 
 const reverse_keith = [
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/2217077e-20d0-475a-a304-88dec020db16/ReverseKeithRichardsBoxCover.png?content-type=image%2Fpng",
+  // "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/2217077e-20d0-475a-a304-88dec020db16/ReverseKeithRichardsBoxCover.png?content-type=image%2Fpng",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/10359536-398a-4d96-a9fa-d5b57fa58481/ReverseKeithRichardsBookCover.png?content-type=image%2Fpng",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/a9467a55-2764-498e-bcb5-ab4ec97cc2d5/ReverseKeithRichardsBook_Spead01.jpg?content-type=image%2Fjpeg",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/e938b4db-83e9-403a-b1d9-bd7f4c1ea128/ReverseKeithRichardsBook_Spead02.jpg?content-type=image%2Fjpeg",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/1a4de605-109a-400e-9903-79ef97a619df/ReverseKeithRichardsBookBack.png?content-type=image%2Fpng"
+  // "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/1a4de605-109a-400e-9903-79ef97a619df/ReverseKeithRichardsBookBack.png?content-type=image%2Fpng"
 ]
 
 
 
-const books_arr = [dictatorship, christaine, invite_24, ah_19_invite, pe_18_zine, reverse_keith]
+const books_arr = [dictatorship, christaine, reverse_keith, invite_24, ah_19_invite, pe_18_zine]
 
 class Books
  extends Component {

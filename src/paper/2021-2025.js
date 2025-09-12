@@ -30,7 +30,7 @@ class Paper2021to2025
  extends Component {
   render() {
     return (
-      <div>
+      <div className="paper-21" >
           {imgs.map(image => (
               <img className="d-block w-100" src={image} alt="" />
           ))}         
