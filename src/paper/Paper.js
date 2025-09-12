@@ -18,7 +18,7 @@ class Paper
         <Routes>
           {/* Landing page route - shows when at /paper exactly */}
           <Route index element={(
-            <div>
+            <div className="paper-21">
               <img className="d-block w-100" src={landingImage} alt="Paper landing image" />
             </div>
           )} />
