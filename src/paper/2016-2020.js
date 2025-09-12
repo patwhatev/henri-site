@@ -26,7 +26,7 @@ class Paper2016to2020
  extends Component {
   render() {
     return (
-      <div>
+      <div className='paper-16'>
           {imgs.map(image => (
               <img className="d-block w-100" src={image} alt="" />
           ))}         

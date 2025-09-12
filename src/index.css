@@ -144,8 +144,16 @@ img {
 }
 
 .paper-21 img {
-  max-width: 650px;
+  /* max-width: 640px; */
+  max-width: 55%;
   text-align: center;
+  margin-bottom: 160px !important;
+}
+
+.paper-16 {
+  max-width: 81%;
+  margin: 0 auto;
+
 }
 
 .scrolldown-img {
