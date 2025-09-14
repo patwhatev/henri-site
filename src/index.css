@@ -264,7 +264,7 @@ img {
   font-weight: bold;
   text-transform: uppercase;
   display: block;
-  padding: 15px 0;
+  padding: 3px 0;
 }
 
 .mobile-nav a:hover {
@@ -328,5 +328,38 @@ img {
   /* Hide blank landscape images on mobile */
   .photo-grid-item[src*="blank+landscape.png"] {
     display: none !important;
+  }
+
+  /* Mobile carousel vertical centering */
+  .carousel {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .carousel-inner {
+    /* height: 100%; */
+    width: 100%;
+  }
+
+  .carousel-item {
+    height: 100%;
+    text-align: center;
+  }
+
+  .carousel-item img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    vertical-align: middle;
+  }
+
+  /* Create a vertical centering context without interfering with positioning */
+  .carousel-item::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
   }
 }
