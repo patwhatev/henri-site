@@ -3,21 +3,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from "react";
 
 const imgs = [
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/8438443d-81c5-4801-be0c-e3b233a4781c/1756585581378-00dfa619-558a-466d-8ffb-d61deca85115_1.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/6df5b292-3ef2-4263-8965-bd8186109852/1756585581378-00dfa619-558a-466d-8ffb-d61deca85115_2.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/72407ae3-6ece-4a82-bca6-d555335bb955/1756585581378-00dfa619-558a-466d-8ffb-d61deca85115_3.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/a91bfd01-79cf-4d86-bc9c-df1cb61f5750/1756585581378-00dfa619-558a-466d-8ffb-d61deca85115_4.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/2d455a52-6ec2-4aeb-a1df-6f6677d5a310/1756585581378-00dfa619-558a-466d-8ffb-d61deca85115_5.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/b679fec5-0314-4501-8180-127030fed243/1756585581378-00dfa619-558a-466d-8ffb-d61deca85115_6.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/d45b4f10-4d99-443f-bdec-735be3e530b7/1756585581378-00dfa619-558a-466d-8ffb-d61deca85115_7.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/98426531-409e-43c0-ba42-907ba75851e4/1756585581378-00dfa619-558a-466d-8ffb-d61deca85115_8.png?content-type=image%2Fpng",
-]
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/a30b0aac-41f8-415c-8623-6ab0ec4dd40e/Assemblage_01.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/3845a25e-d481-405d-ba50-1b176349e5d5/Assemblage_02.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/406e240c-6ce3-4acc-9bac-3568f3344329/Assemblage_03.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/9495235c-133a-4e8b-aa29-bdf6bec0d478/Assemblage_04.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/6718c9d2-7f57-4baf-ab87-aa333c73e04f/Assemblage_05.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/8a6ce475-1e60-4ff8-81c8-364c1e3021bd/Assemblage_06.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/0e725479-f214-443e-a1f1-8c29a6750d3a/Assemblage_07.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/086dc1d9-7f0a-44cc-b205-64109a7be1ce/Assemblage_08.jpg?content-type=image%2Fjpeg",
+];
  
 class Eden
  extends Component {
   render() {
     return (
-	    <div>
+	    <div className='assemblage'>
           {imgs.map(image => (
               <img className="d-block w-100 scrolldown-img" src={image} alt="" />
           ))}         
