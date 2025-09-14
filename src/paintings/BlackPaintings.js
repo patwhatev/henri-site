@@ -12,14 +12,48 @@ const imgs = [
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/4cfeaaac-8c64-4cab-8f2b-d1760a3158db/Black+Paintings_07.jpg?content-type=image%2Fjpeg",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/f4ba96c8-19ec-402e-8cf3-2529276ae367/Black+Paintings_08.jpg?content-type=image%2Fjpeg",
 ] 
-class BlackPaintings
- extends Component {
+class BlackPaintings extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: window.innerWidth <= 400
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({
+      isMobile: window.innerWidth <= 400
+    });
+  }
+
   render() {
+    const { isMobile } = this.state;
+
+    if (isMobile) {
+      return (
+        <div className="black-paintings-mobile">
+          {imgs.map((image, index) => (
+            <div key={index}>
+              <img className="d-block w-100" src={image} alt="" />
+            </div>
+          ))}
+        </div>
+      );
+    }
+
     return (
       <div>
         <Carousel>
-          {imgs.map(image => (
-            <Carousel.Item>
+          {imgs.map((image, index) => (
+            <Carousel.Item key={index}>
               <img className="d-block w-100" src={image} alt="" />
             </Carousel.Item>
           ))}         
