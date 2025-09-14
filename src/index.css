@@ -362,4 +362,19 @@ img {
     height: 100%;
     vertical-align: middle;
   }
+
+  /* Fix carousel arrows to consistent vertical position */
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    position: relative !important;
+    margin-top: 0 !important;
+  }
 }
