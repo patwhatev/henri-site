@@ -7,7 +7,7 @@ import Graphs from "./Graphs";
 import Heroin from "./Heroin";
 import Paintings2 from "./Paintings2";
 
-const landingImage = "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/7dc99ae3-7a3a-4080-af7f-e00a23707f43/1756595697813-c13e4d5e-f762-4dfd-aacd-2b797024b29e_7.png?content-type=image%2Fpng";
+const landingImage = "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/cc4dd351-c1e5-47e9-beed-997bef749647/Black+Paintings_01.jpg?content-type=image%2Fjpeg";
 
 class Paintings extends Component {
   render() {

@@ -11,16 +11,10 @@ const sculptures = [
     id: 'cages',
     description: 'description goes here'
   },
-  // {
-  //   name: 'Chaises',
-  //   className: 'Chaises',
-  //   id: 'chaises',
-  //   description: 'description goes here'
-  // },
   {
-    name: 'Chaise Manteau',
-    className: 'ChaiseManteau',
-    id: 'chaise-manteau',
+    name: 'Chaises',
+    className: 'Chaises',
+    id: 'chaises',
     description: 'description goes here'
   },
   {
@@ -34,7 +28,13 @@ const sculptures = [
     className: 'NarcanCar',
     id: 'narcan-car',
     description: 'description goes here'
-  }
+  },
+  {
+    name: 'Objekt',
+    className: 'Objekt',
+    id: 'objekt',
+    description: 'description goes here'
+  },
 ]
 
 class SculptureNav extends Component {

@@ -156,6 +156,10 @@ img {
 
 }
 
+.chaises, .objekt {
+  max-width: 50%;
+}
+
 .scrolldown-img {
   padding: 15px 20px;
 }

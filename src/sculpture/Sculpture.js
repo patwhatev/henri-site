@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import SculptureNav from "./SculptureNav";
 import Chaises from "./Chaises";
-import ChaiseManteau from "./ChaiseManteau";
+import Objekt from "./Objekt";
 import SynthesizerPrisonUnit from "./SynthesizerPrisonUnit";
 import NarcanCar from "./NarcanCar";
 import Cages from "./Cages";
@@ -26,10 +26,10 @@ class Sculpture extends Component {
           
           {/* Sub-page routes - show carousels without landing image */}
           <Route path="cages" element={<Cages />} />
-          <Route path="chaises" element={<Chaises />} />
+          <Route path="objekt" element={<Objekt />} />
           <Route path="narcan-car" element={<NarcanCar />} />
           <Route path="synthesizer-prison-unit" element={<SynthesizerPrisonUnit />} />
-          <Route path="chaise-manteau" element={<ChaiseManteau />} />
+          <Route path="chaises" element={<Chaises />} />
         </Routes>
       </div>
     );

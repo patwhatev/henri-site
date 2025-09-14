@@ -3,14 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from "react";
 
 const imgs = [
-      "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/0d4d0c4d-3592-4947-93cd-163b9288bfcf/1756595697813-c13e4d5e-f762-4dfd-aacd-2b797024b29e_1.png?content-type=image%2Fpng",
-      "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/df1ae534-a29d-4220-8974-1ce7b080214f/1756595697813-c13e4d5e-f762-4dfd-aacd-2b797024b29e_2.png?content-type=image%2Fpng",
-      "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/af4bb51c-52cc-4da2-a3ba-27bfaa6b48e2/1756595697813-c13e4d5e-f762-4dfd-aacd-2b797024b29e_3.png?content-type=image%2Fpng",
-      "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/ea966199-3440-4e59-bf57-76c8f6a6e76c/1756595697813-c13e4d5e-f762-4dfd-aacd-2b797024b29e_4.png?content-type=image%2Fpng",
-      "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/3b01a987-aecf-4dfa-923c-c5ecff49a242/1756595697813-c13e4d5e-f762-4dfd-aacd-2b797024b29e_5.png?content-type=image%2Fpng",
-      "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/50e0ddad-a77d-4da3-971c-e8615ad4a7c3/1756595697813-c13e4d5e-f762-4dfd-aacd-2b797024b29e_6.png?content-type=image%2Fpng",
-      "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/7dc99ae3-7a3a-4080-af7f-e00a23707f43/1756595697813-c13e4d5e-f762-4dfd-aacd-2b797024b29e_7.png?content-type=image%2Fpng",
-    ] 
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/cc4dd351-c1e5-47e9-beed-997bef749647/Black+Paintings_01.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/dcab4599-311c-4e8b-bae0-c03d9b1cad8e/Black+Paintings_02.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/9d3676f4-bbff-4c16-9cba-4448e135cd79/Black+Paintings_03.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/863e6e65-43da-4c07-b28b-4ab3cf839c1b/Black+Paintings_04.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/05e8ca7d-240d-416c-b100-5b7d3f0b3ebe/Black+Paintings_05.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/190ca95d-f17f-45e0-a468-305aac78fb6a/Black+Paintings_06.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/4cfeaaac-8c64-4cab-8f2b-d1760a3158db/Black+Paintings_07.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/f4ba96c8-19ec-402e-8cf3-2529276ae367/Black+Paintings_08.jpg?content-type=image%2Fjpeg",
+] 
 class BlackPaintings
  extends Component {
   render() {
