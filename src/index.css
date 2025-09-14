@@ -282,6 +282,13 @@ img {
     justify-content: center;
   }
 
+  /* Hamburger icon sizing on mobile */
+  .hamburger-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+
   /* Hide desktop navigation on mobile */
   .desktop-nav {
     display: none;
