@@ -40,9 +40,7 @@ function Navigation() {
       
       {/* Hamburger Menu Button - Only visible on mobile */}
       <button className="hamburger-menu" onClick={toggleMobileMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
+        <img src="/hamb-icon.png" alt="Menu" className="hamburger-icon" />
       </button>
 
       {/* Desktop Navigation - Hidden on mobile */}

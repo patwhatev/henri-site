@@ -220,12 +220,10 @@ img {
   z-index: 1001;
 }
 
-.hamburger-menu span {
-  display: block;
+.hamburger-icon {
   width: 100%;
-  height: 3px;
-  background-color: #111;
-  transition: all 0.3s ease;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Mobile Navigation Styles */
@@ -280,14 +278,8 @@ img {
   /* Show hamburger menu on mobile */
   .hamburger-menu {
     display: flex;
-  }
-
-  /* Ensure hamburger lines are visible on mobile */
-  .hamburger-menu span {
-    background-color: #111 !important;
-    height: 3px !important;
-    width: 100% !important;
-    display: block !important;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Hide desktop navigation on mobile */
