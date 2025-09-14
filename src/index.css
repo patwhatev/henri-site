@@ -164,10 +164,6 @@ img {
   padding: 15px 20px;
 }
 
-.assemblage img {
-  /* max-width: 65%; */
-}
-
 .active {
   color: #111 !important;
 }
@@ -212,12 +208,12 @@ img {
 .hamburger-menu {
   display: none;
   position: absolute;
-  top: 20px;
+  top: 35px;
   left: 20px;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 25px;
+  height: 24px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -315,13 +311,18 @@ img {
   }
 
   .content li {
-    margin: 5px 0;
+    margin: -10px 0;
   }
 
   .content li a {
     padding: 15px;
     width: 100%;
     text-align: center;
+    font-size: 11px;
+  }
+
+  .carousel-control-next-icon:after, .carousel-control-prev-icon:after {
+    font-size: 18px;
   }
 
   /* Hide blank landscape images on mobile */
