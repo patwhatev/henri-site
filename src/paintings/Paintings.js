@@ -7,7 +7,7 @@ import Graphs from "./Graphs";
 import Heroin from "./Heroin";
 import Paintings2 from "./Paintings2";
 
-const landingImage = "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/cc4dd351-c1e5-47e9-beed-997bef749647/Black+Paintings_01.jpg?content-type=image%2Fjpeg";
+const landingImage = "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/dcab4599-311c-4e8b-bae0-c03d9b1cad8e/Black+Paintings_02.jpg?content-type=image%2Fjpeg";
 
 class Paintings extends Component {
   constructor(props) {
