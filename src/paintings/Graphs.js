@@ -7,14 +7,37 @@ const imgs = [
       "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/073dfd4d-b25d-47c8-a663-a407bc64bcea/1756598137990-c46628b8-5164-46ba-af22-fe3ae5653cc9_1.png?content-type=image%2Fpng",
       "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/c82e8ee3-e124-40ed-93a1-eeae95882685/1756598137990-c46628b8-5164-46ba-af22-fe3ae5653cc9_3.png?content-type=image%2Fpng",
     ] 
-class Graphs
- extends Component {
+class Graphs extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: window.innerWidth <= 400
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({
+      isMobile: window.innerWidth <= 400
+    });
+  }
+
   render() {
+    const { isMobile } = this.state;
+    const formatParam = isMobile ? "?format=100w" : "?format=2500w";
+
     return (
       <Carousel>
-          {imgs.map(image => (
-            <Carousel.Item>
-              <img className="d-block w-100" src={image} alt="" />
+          {imgs.map((image, index) => (
+            <Carousel.Item key={index}>
+              <img className="d-block w-100" src={`${image}${formatParam}`} alt="" />
             </Carousel.Item>
           ))}         
         </Carousel>

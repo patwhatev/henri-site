@@ -13,8 +13,28 @@ const imgs = [
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/086dc1d9-7f0a-44cc-b205-64109a7be1ce/Assemblage_08.jpg?content-type=image%2Fjpeg",
 ];
  
-class Eden
- extends Component {
+class Eden extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: window.innerWidth <= 400
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({
+      isMobile: window.innerWidth <= 400
+    });
+  }
+
   check_img(img) {
     let style_add = {};
 
@@ -30,6 +50,9 @@ class Eden
   }
 
   render() {
+    const { isMobile } = this.state;
+    const formatParam = isMobile ? "?format=100w" : "?format=2500w";
+
     return (
 	    <div className='assemblage'>
           {imgs.map((image, index) => {
@@ -38,7 +61,7 @@ class Eden
             <div key={index}>
               <img 
                 className={dynamicStyle.className}
-                src={image} 
+                src={`${image}${formatParam}`} 
                 alt="" 
                 style={{
                   ...dynamicStyle

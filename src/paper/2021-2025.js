@@ -27,13 +27,36 @@ const imgs = [
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/c9fabacb-ba67-469c-a397-9f5d72c21d6f/New+Paper_22.png?content-type=image%2Fpng",
 ];
 
-class Paper2021to2025
- extends Component {
+class Paper2021to2025 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: window.innerWidth <= 400
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({
+      isMobile: window.innerWidth <= 400
+    });
+  }
+
   render() {
+    const { isMobile } = this.state;
+    const formatParam = isMobile ? "?format=100w" : "?format=2500w";
+
     return (
       <div className="paper-21" >
-          {imgs.map(image => (
-              <img className="d-block w-100" src={image} alt="" />
+          {imgs.map((image, index) => (
+              <img key={index} className="d-block w-100" src={`${image}${formatParam}`} alt="" />
           ))}         
       </div>
     );

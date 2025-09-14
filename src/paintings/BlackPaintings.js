@@ -36,13 +36,14 @@ class BlackPaintings extends Component {
 
   render() {
     const { isMobile } = this.state;
+    const formatParam = isMobile ? "?format=100w" : "?format=2500w";
 
     if (isMobile) {
       return (
         <div className="black-paintings-mobile">
           {imgs.map((image, index) => (
             <div key={index}>
-              <img className="d-block w-100" src={image} alt="" />
+              <img className="d-block w-100" src={`${image}${formatParam}`} alt="" />
             </div>
           ))}
         </div>
@@ -54,7 +55,7 @@ class BlackPaintings extends Component {
         <Carousel>
           {imgs.map((image, index) => (
             <Carousel.Item key={index}>
-              <img className="d-block w-100" src={image} alt="" />
+              <img className="d-block w-100" src={`${image}${formatParam}`} alt="" />
             </Carousel.Item>
           ))}         
         </Carousel>

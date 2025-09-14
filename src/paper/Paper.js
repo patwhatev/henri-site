@@ -8,9 +8,32 @@ import Paper2021to2025 from "./2021-2025";
 const landingImage =      "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/398311c5-eb04-46d6-b1cb-2849773de5e7/1756594677705-565b4606-7959-455d-ab03-e49ce4a84e6c_1.png?content-type=image%2Fpng";
 
 
-class Paper
- extends Component {
+class Paper extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: window.innerWidth <= 400
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({
+      isMobile: window.innerWidth <= 400
+    });
+  }
+
   render() {
+    const { isMobile } = this.state;
+    const formatParam = isMobile ? "?format=100w" : "?format=2500w";
+
     return (
       <div className="content">
         <PaperNav/>
@@ -19,7 +42,7 @@ class Paper
           {/* Landing page route - shows when at /paper exactly */}
           <Route index element={(
             <div className="paper-21">
-              <img className="d-block w-100" src={landingImage} alt="Paper landing image" />
+              <img className="d-block w-100" src={`${landingImage}${formatParam}`} alt="Paper landing image" />
             </div>
           )} />
           

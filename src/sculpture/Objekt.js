@@ -10,15 +10,38 @@ const imgs = [
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/3cfe6587-875a-437f-8627-afc4d946a057/100-440-B.png?content-type=image%2Fpng",
 ];
 
-class Objekt
- extends Component {
+class Objekt extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: window.innerWidth <= 400
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({
+      isMobile: window.innerWidth <= 400
+    });
+  }
+
   render() {
+    const { isMobile } = this.state;
+    const formatParam = isMobile ? "?format=100w" : "?format=2500w";
+
     return (
       <div>
           <Carousel>
-          {imgs.map(image => (
-            <Carousel.Item>
-              <img className="objekt d-block w-100" src={image} alt="" />
+          {imgs.map((image, index) => (
+            <Carousel.Item key={index}>
+              <img className="objekt d-block w-100" src={`${image}${formatParam}`} alt="" />
             </Carousel.Item>
           ))}         
         </Carousel>        

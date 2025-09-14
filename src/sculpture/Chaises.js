@@ -9,15 +9,38 @@ const imgs = [
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/c2362228-3492-4f2b-af70-e142514c29f8/SingleCrossChair2.png?content-type=image%2Fpng"
 ];
 
-class Chaises
- extends Component {
+class Chaises extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: window.innerWidth <= 400
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({
+      isMobile: window.innerWidth <= 400
+    });
+  }
+
   render() {
+    const { isMobile } = this.state;
+    const formatParam = isMobile ? "?format=100w" : "?format=2500w";
+
     return (
       <div>
         <Carousel>
-          {imgs.map(image => (
-            <Carousel.Item>
-              <img className="chaises d-block w-100" src={image} alt="" />
+          {imgs.map((image, index) => (
+            <Carousel.Item key={index}>
+              <img className="chaises d-block w-100" src={`${image}${formatParam}`} alt="" />
             </Carousel.Item>
           ))}         
         </Carousel>

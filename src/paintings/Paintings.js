@@ -10,7 +10,31 @@ import Paintings2 from "./Paintings2";
 const landingImage = "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/cc4dd351-c1e5-47e9-beed-997bef749647/Black+Paintings_01.jpg?content-type=image%2Fjpeg";
 
 class Paintings extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: window.innerWidth <= 400
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({
+      isMobile: window.innerWidth <= 400
+    });
+  }
+
   render() {
+    const { isMobile } = this.state;
+    const formatParam = isMobile ? "?format=100w" : "?format=2500w";
+
     return (
       <div className="content">
         <PaintingsNav/>
@@ -19,7 +43,7 @@ class Paintings extends Component {
           {/* Landing page route - shows when at /paintings exactly */}
           <Route index element={(
             <div>
-              <img className="d-block w-100" src={landingImage} alt="Paintings landing image" />
+              <img className="d-block w-100" src={`${landingImage}${formatParam}`} alt="Paintings landing image" />
             </div>
           )} />
           
