@@ -15,12 +15,38 @@ const imgs = [
  
 class Eden
  extends Component {
+  check_img(img) {
+    let style_add = {};
+
+    if (img.includes("_07.jpg")) {
+      console.log("found match: ", img)
+      style_add.className = 'img-7';
+    } else {
+      style_add.className = 'photo-grid-item';
+
+    }
+
+    return style_add;
+  }
+
   render() {
     return (
 	    <div className='assemblage'>
-          {imgs.map(image => (
-              <img className="d-block w-100 scrolldown-img" src={image} alt="" />
-          ))}         
+          {imgs.map((image, index) => {
+          const dynamicStyle = this.check_img(image);
+          return (
+            <div key={index}>
+              <img 
+                className={dynamicStyle.className}
+                src={image} 
+                alt="" 
+                style={{
+                  ...dynamicStyle
+                }}  
+              />
+            </div>
+          );
+        })}          
 		</div>
     );
   }
