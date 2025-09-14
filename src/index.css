@@ -192,6 +192,23 @@ img {
   object-fit: cover; /* This ensures images maintain aspect ratio */
 }
 
+/* Image loading states */
+.image-container {
+  position: relative;
+}
+
+.image-container img.loading {
+  filter: blur(5px);
+  opacity: 0.7;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.image-container img.loaded {
+  filter: blur(0px);
+  opacity: 1;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
 /* image 7 in assemblage */
 .img-7 {
   max-width: 90% !important;
@@ -200,15 +217,11 @@ img {
 /* Optional: Make it responsive */
 @media (max-width: 768px) {
   .photo-grid-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    grid-template-columns: repeat(3, 1fr); /* 2 columns on smaller screens */
   }
 }
 
-@media (max-width: 480px) {
-  .photo-grid-container {
-    grid-template-columns: 1fr; /* 1 column on mobile */
-  }
-}
+
 
 
 /* Hamburger Menu Styles */

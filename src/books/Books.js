@@ -47,8 +47,19 @@ const reverse_keith = [
 
 const books_arr = [dictatorship, christaine, reverse_keith, invite_24, ah_19_invite, pe_18_zine]
 
-class Books
- extends Component {
+class Books extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loadedImages: new Set()
+    };
+  }
+
+  handleImageLoad = (imageUrl) => {
+    this.setState(prevState => ({
+      loadedImages: new Set(prevState.loadedImages).add(imageUrl)
+    }));
+  }
 
   check_img(img) {
     let style_add = {};
@@ -71,27 +82,30 @@ class Books
   }
   
   render() {
-  const allImages = books_arr.flat();
-  return (
-    <div className="content">
-        {allImages.map((image, index) => {
-          const dynamicStyle = this.check_img(image);
-          return (
-            <div key={index}>
-              <img 
-                // className="photo-grid-item" 
-                src={image} 
-                alt="" 
-                style={{
-                  ...dynamicStyle
-                }}  
-              />
-            </div>
-          );
-        })}         
-    </div>
-  );
-}
+    const { loadedImages } = this.state;
+    const allImages = books_arr.flat();
+    return (
+      <div className="content">
+          {allImages.map((image, index) => {
+            const dynamicStyle = this.check_img(image);
+            const isLoaded = loadedImages.has(image);
+            return (
+              <div key={index} className="image-container">
+                <img
+                  className={isLoaded ? 'loaded' : 'loading'}
+                  src={image}
+                  alt=""
+                  style={{
+                    ...dynamicStyle
+                  }}
+                  onLoad={() => this.handleImageLoad(image)}
+                />
+              </div>
+            );
+          })}
+      </div>
+    );
+  }
 }
 
 export default Books;

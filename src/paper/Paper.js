@@ -12,7 +12,8 @@ class Paper extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile: window.innerWidth <= 400
+      isMobile: window.innerWidth <= 400,
+      loadedImages: new Set()
     };
   }
 
@@ -30,8 +31,14 @@ class Paper extends Component {
     });
   }
 
+  handleImageLoad = (imageUrl) => {
+    this.setState(prevState => ({
+      loadedImages: new Set(prevState.loadedImages).add(imageUrl)
+    }));
+  }
+
   render() {
-    const { isMobile } = this.state;
+    const { isMobile, loadedImages } = this.state;
     const formatParam = isMobile ? "?format=100w" : "?format=2500w";
 
     return (
@@ -42,7 +49,14 @@ class Paper extends Component {
           {/* Landing page route - shows when at /paper exactly */}
           <Route index element={(
             <div className="paper-21">
-              <img className="d-block w-100" src={`${landingImage}${formatParam}`} alt="Paper landing image" />
+              <div className="image-container">
+                <img
+                  className={`d-block w-100 ${loadedImages.has(`${landingImage}${formatParam}`) ? 'loaded' : 'loading'}`}
+                  src={`${landingImage}${formatParam}`}
+                  alt="Paper landing image"
+                  onLoad={() => this.handleImageLoad(`${landingImage}${formatParam}`)}
+                />
+              </div>
             </div>
           )} />
           

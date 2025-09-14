@@ -17,7 +17,8 @@ class Eden extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile: window.innerWidth <= 400
+      isMobile: window.innerWidth <= 400,
+      loadedImages: new Set()
     };
   }
 
@@ -35,6 +36,12 @@ class Eden extends Component {
     });
   }
 
+  handleImageLoad = (imageUrl) => {
+    this.setState(prevState => ({
+      loadedImages: new Set(prevState.loadedImages).add(imageUrl)
+    }));
+  }
+
   check_img(img) {
     let style_add = {};
 
@@ -50,26 +57,30 @@ class Eden extends Component {
   }
 
   render() {
-    const { isMobile } = this.state;
+    const { isMobile, loadedImages } = this.state;
     const formatParam = isMobile ? "?format=100w" : "?format=2500w";
 
     return (
 	    <div className='assemblage'>
           {imgs.map((image, index) => {
           const dynamicStyle = this.check_img(image);
+          const fullImageUrl = `${image}${formatParam}`;
+          const isLoaded = loadedImages.has(fullImageUrl);
+
           return (
-            <div key={index}>
-              <img 
-                className={dynamicStyle.className}
-                src={`${image}${formatParam}`} 
-                alt="" 
+            <div key={index} className="image-container">
+              <img
+                className={`${dynamicStyle.className} ${isLoaded ? 'loaded' : 'loading'}`}
+                src={fullImageUrl}
+                alt=""
                 style={{
                   ...dynamicStyle
-                }}  
+                }}
+                onLoad={() => this.handleImageLoad(fullImageUrl)}
               />
             </div>
           );
-        })}          
+        })}
 		</div>
     );
   }

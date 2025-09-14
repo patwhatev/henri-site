@@ -31,7 +31,8 @@ class Paper2021to2025 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile: window.innerWidth <= 400
+      isMobile: window.innerWidth <= 400,
+      loadedImages: new Set()
     };
   }
 
@@ -49,15 +50,32 @@ class Paper2021to2025 extends Component {
     });
   }
 
+  handleImageLoad = (imageUrl) => {
+    this.setState(prevState => ({
+      loadedImages: new Set(prevState.loadedImages).add(imageUrl)
+    }));
+  }
+
   render() {
-    const { isMobile } = this.state;
+    const { isMobile, loadedImages } = this.state;
     const formatParam = isMobile ? "?format=100w" : "?format=2500w";
 
     return (
       <div className="paper-21" >
-          {imgs.map((image, index) => (
-              <img key={index} className="d-block w-100" src={`${image}${formatParam}`} alt="" />
-          ))}         
+          {imgs.map((image, index) => {
+            const fullImageUrl = `${image}${formatParam}`;
+            const isLoaded = loadedImages.has(fullImageUrl);
+            return (
+              <div key={index} className="image-container">
+                <img
+                  className={`d-block w-100 ${isLoaded ? 'loaded' : 'loading'}`}
+                  src={fullImageUrl}
+                  alt=""
+                  onLoad={() => this.handleImageLoad(fullImageUrl)}
+                />
+              </div>
+            );
+          })}
       </div>
     );
   }

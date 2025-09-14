@@ -4,7 +4,8 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile: window.innerWidth <= 400
+      isMobile: window.innerWidth <= 400,
+      loadedImages: new Set()
     };
   }
 
@@ -22,8 +23,14 @@ class Home extends Component {
     });
   }
 
+  handleImageLoad = (imageUrl) => {
+    this.setState(prevState => ({
+      loadedImages: new Set(prevState.loadedImages).add(imageUrl)
+    }));
+  }
+
   render() {
-      const { isMobile } = this.state;
+      const { isMobile, loadedImages } = this.state;
       const formatParam = isMobile ? "?format=100w" : "?format=2500w";
       
       const x_home =   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/9495235c-133a-4e8b-aa29-bdf6bec0d478/Assemblage_04.jpg?content-type=image%2Fjpeg";
@@ -33,12 +40,26 @@ class Home extends Component {
       
       return (
       <div>
-        <img src={`${x_home}${formatParam}`} alt="" className="home-img" />
+        <div className="image-container">
+          <img
+            src={`${x_home}${formatParam}`}
+            alt=""
+            className={`home-img ${loadedImages.has(`${x_home}${formatParam}`) ? 'loaded' : 'loading'}`}
+            onLoad={() => this.handleImageLoad(`${x_home}${formatParam}`)}
+          />
+        </div>
         <br></br>
-        <img src={`${show_info}${formatParam}`} alt="" className="show-details" style={{
-                width: '60%',
-              }}  />
-
+        <div className="image-container">
+          <img
+            src={`${show_info}${formatParam}`}
+            alt=""
+            className={`show-details ${loadedImages.has(`${show_info}${formatParam}`) ? 'loaded' : 'loading'}`}
+            style={{
+              width: '60%',
+            }}
+            onLoad={() => this.handleImageLoad(`${show_info}${formatParam}`)}
+          />
+        </div>
       </div>
     );
   }

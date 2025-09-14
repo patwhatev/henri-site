@@ -14,7 +14,8 @@ class Sculpture extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile: window.innerWidth <= 400
+      isMobile: window.innerWidth <= 400,
+      loadedImages: new Set()
     };
   }
 
@@ -32,8 +33,14 @@ class Sculpture extends Component {
     });
   }
 
+  handleImageLoad = (imageUrl) => {
+    this.setState(prevState => ({
+      loadedImages: new Set(prevState.loadedImages).add(imageUrl)
+    }));
+  }
+
   render() {
-    const { isMobile } = this.state;
+    const { isMobile, loadedImages } = this.state;
     const formatParam = isMobile ? "?format=100w" : "?format=2500w";
 
     return (
@@ -44,7 +51,14 @@ class Sculpture extends Component {
           {/* Landing page route - shows when at /sculpture exactly */}
           <Route index element={(
             <div>
-              <img className="d-block w-100" src={`${landingImage}${formatParam}`} alt="Sculpture landing image" />
+              <div className="image-container">
+                <img
+                  className={`d-block w-100 ${loadedImages.has(`${landingImage}${formatParam}`) ? 'loaded' : 'loading'}`}
+                  src={`${landingImage}${formatParam}`}
+                  alt="Sculpture landing image"
+                  onLoad={() => this.handleImageLoad(`${landingImage}${formatParam}`)}
+                />
+              </div>
             </div>
           )} />
           

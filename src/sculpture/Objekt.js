@@ -14,7 +14,8 @@ class Objekt extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile: window.innerWidth <= 400
+      isMobile: window.innerWidth <= 400,
+      loadedImages: new Set()
     };
   }
 
@@ -32,18 +33,35 @@ class Objekt extends Component {
     });
   }
 
+  handleImageLoad = (imageUrl) => {
+    this.setState(prevState => ({
+      loadedImages: new Set(prevState.loadedImages).add(imageUrl)
+    }));
+  }
+
   render() {
-    const { isMobile } = this.state;
+    const { isMobile, loadedImages } = this.state;
     const formatParam = isMobile ? "?format=100w" : "?format=2500w";
 
     return (
       <div>
           <Carousel>
-          {imgs.map((image, index) => (
-            <Carousel.Item key={index}>
-              <img className="objekt d-block w-100" src={`${image}${formatParam}`} alt="" />
-            </Carousel.Item>
-          ))}         
+          {imgs.map((image, index) => {
+            const fullImageUrl = `${image}${formatParam}`;
+            const isLoaded = loadedImages.has(fullImageUrl);
+            return (
+              <Carousel.Item key={index}>
+                <div className="image-container">
+                  <img
+                    className={`objekt d-block w-100 ${isLoaded ? 'loaded' : 'loading'}`}
+                    src={fullImageUrl}
+                    alt=""
+                    onLoad={() => this.handleImageLoad(fullImageUrl)}
+                  />
+                </div>
+              </Carousel.Item>
+            );
+          })}
         </Carousel>        
       </div>
     );

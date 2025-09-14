@@ -108,23 +108,43 @@ const page4 = [
 const imgs = [cross, page1, page2, page3, page4]
 // Note - this page does not have a nav
 
-class Photographs
- extends Component {
-  
+class Photographs extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loadedImages: new Set()
+    };
+  }
+
+  handleImageLoad = (imageUrl) => {
+    this.setState(prevState => ({
+      loadedImages: new Set(prevState.loadedImages).add(imageUrl)
+    }));
+  }
+
   render() {
+    const { loadedImages } = this.state;
     const allImages = imgs.flat();
     return (
       <div className="content">
         {/* <PhotographsNav /> */}
-        
+
         <Routes>
           <Route index element={(
             <div className="photo-grid-container">
-              {allImages.map((image, index) => (
-                <div key={index}>
-                  <img className="photo-grid-item" src={image} alt="" />
-                </div>
-              ))}         
+              {allImages.map((image, index) => {
+                const isLoaded = loadedImages.has(image);
+                return (
+                  <div key={index} className="image-container">
+                    <img
+                      className={`photo-grid-item ${isLoaded ? 'loaded' : 'loading'}`}
+                      src={image}
+                      alt=""
+                      onLoad={() => this.handleImageLoad(image)}
+                    />
+                  </div>
+                );
+              })}
             </div>
           )} />
         </Routes>
