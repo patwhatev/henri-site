@@ -112,8 +112,28 @@ class Photographs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loadedImages: new Set()
+      loadedImages: new Set(),
+      audioPlaying: false
     };
+    this.audioRef = React.createRef();
+  }
+
+  toggleAudio = () => {
+    const { audioPlaying } = this.state;
+
+    if (audioPlaying) {
+      // Stop audio by resetting iframe
+      if (this.audioRef.current) {
+        this.audioRef.current.src = "https://archive.org/details/01-romanp.tape-1";
+      }
+      this.setState({ audioPlaying: false });
+    } else {
+      // Start audio with autoplay
+      if (this.audioRef.current) {
+        this.audioRef.current.src = "https://archive.org/details/01-romanp.tape-1?auto=1&autoplay=1";
+      }
+      this.setState({ audioPlaying: true });
+    }
   }
 
   handleImageLoad = (imageUrl) => {
@@ -128,6 +148,28 @@ class Photographs extends Component {
     return (
       <div className="content">
         {/* <PhotographsNav /> */}
+
+        {/* Audio Control Icon */}
+        <div
+          onClick={this.toggleAudio}
+          style={{
+            cursor: 'pointer',
+            textAlign: 'center',
+            marginBottom: '20px',
+            padding: '10px'
+          }}
+        >
+          <img
+            src="/favicon.ico"
+            alt="Toggle Audio"
+            style={{
+              width: '24px',
+              height: '24px',
+              opacity: this.state.audioPlaying ? 1 : 0.6,
+              transition: 'opacity 0.2s ease'
+            }}
+          />
+        </div>
 
         <Routes>
           <Route index element={(
@@ -148,6 +190,25 @@ class Photographs extends Component {
             </div>
           )} />
         </Routes>
+
+        {/* Hidden Audio Player - starts playing on scroll */}
+        <iframe
+          ref={this.audioRef}
+          src="https://archive.org/details/01-romanp.tape-1?auto=1"
+          width="1"
+          height="1"
+          frameBorder="0"
+          style={{
+            position: 'absolute',
+            left: '-9999px',
+            opacity: 0,
+            pointerEvents: 'none'
+          }}
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true"
+          allowFullScreen
+        ></iframe>
+
       </div>
     );
   }
