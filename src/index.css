@@ -179,6 +179,10 @@ img {
   margin-bottom: 10px;
 }
 
+.instrumentals {
+  margin-top: 15%;
+}
+
 .photo-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
