@@ -24,19 +24,20 @@ const tracks = [
     audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/03-mexique.m4a"
   },
   {
+    image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/6cd27898-b349-475b-80d3-20e8ff303597/highschool.png?content-type=image%2Fpng",
+    title: "buy a girls highschoolV2",
+    trackNumber: 4,
+    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/buy%20a%20girls%20highschoolV2.m4a",
+    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/buy%20a%20girls%20highschoolV2.m4a"
+  },
+  {
     image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/fd21f409-991e-40d7-a69a-0286fd1ca694/sunkil.png?content-type=image%2Fpng",
     title: "sunkilhank",
-    trackNumber: 4,
+    trackNumber: 5,
     playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/05-sunkilhank.m4a",
     audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/05-sunkilhank.m4a"
   },
-  {
-    image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/6cd27898-b349-475b-80d3-20e8ff303597/highschool.png?content-type=image%2Fpng",
-    title: "buy a girls highschoolV2",
-    trackNumber: 5,
-    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/buy%20a%20girls%20highschoolV2.m4a",
-    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/buy%20a%20girls%20highschoolV2.m4a"
-  }
+
 ]
 
 const porcelain_trays = {
@@ -152,10 +153,9 @@ class Instrumentals extends Component {
       maxWidth: isMobile ? '400px' : 'none',
       objectFit: 'cover',
       cursor: 'pointer',
-      opacity: isPlaying ? 1 : 0.8,
-      transition: 'all 0.2s ease',
-      border: isPlaying ? '3px solid #333' : '3px solid transparent',
-      borderRadius: '4px'
+      opacity: isPlaying ? 0.5 : 1,
+      filter: isPlaying ? 'grayscale(40%)' : 'grayscale(0%)',
+      transition: 'all 0.3s ease'
     });
 
     return (

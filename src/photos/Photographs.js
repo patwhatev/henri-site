@@ -159,7 +159,7 @@ class Photographs extends Component {
             padding: '10px'
           }}
         >
-          <img
+          {/* <img
             src="/favicon.ico"
             alt="Toggle Audio"
             style={{
@@ -168,7 +168,7 @@ class Photographs extends Component {
               opacity: this.state.audioPlaying ? 1 : 0.6,
               transition: 'opacity 0.2s ease'
             }}
-          />
+          /> */}
         </div>
 
         <Routes>
