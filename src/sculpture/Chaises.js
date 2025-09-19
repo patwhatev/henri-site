@@ -3,10 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from "react";
 
 const imgs = [
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/d2120b41-4bdb-4306-abb5-31fbefd9f5a4/CornerChair1.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/e87d6ba6-46c3-467a-8536-7b8ee859857f/CornerChair2.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/0271cde4-e834-431f-85e4-00ac6aad5f62/SingleCrossChair1.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/c2362228-3492-4f2b-af70-e142514c29f8/SingleCrossChair2.png?content-type=image%2Fpng"
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/98184176-30d3-450f-a90a-29be862b4237/Chaises_01.jpg?content-type=image%2Fjpeg",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/64fd2ecf-d9b1-4f0e-8739-c57d9b5ba0fc/Chaises_02.jpg?content-type=image%2Fjpeg"
 ];
 
 class Chaises extends Component {

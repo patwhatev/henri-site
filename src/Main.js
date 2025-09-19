@@ -51,6 +51,7 @@ function Navigation() {
         <li><NavLink to="/photos">Photographs</NavLink></li>
         <li><NavLink to="/sculpture">Sculpture/Furniture</NavLink></li>
         <li><NavLink to="/books">Books/Zines</NavLink></li>
+        <li><NavLink to="/instrumentals">Instrumentals</NavLink></li>
       </ul>
 
       {/* Mobile Navigation Menu */}
@@ -86,6 +87,11 @@ function Navigation() {
             onClick={closeMobileMenu}
             className={isActive('/books') ? 'active' : ''}
           >Books/Zines</NavLink></li>
+          <li><NavLink 
+            to="/instrumentals" 
+            onClick={closeMobileMenu}
+            className={isActive('/instrumentals') ? 'active' : ''}
+          >Instrumentals</NavLink></li>
         </ul>
       </div>
     </>
@@ -107,7 +113,7 @@ class Main extends Component {
               <Route path="/photos/*" element={<Photographs />} />
               <Route path="/sculpture/*" element={<Sculpture />} />
               <Route path="/books/*" element={<Books />} />
-              {/* <Route path="/instrumentals/*" element={<Instrumentals />} /> */}
+              <Route path="/instrumentals/*" element={<Instrumentals />} />
             </Routes>
           </div>
         </div>
