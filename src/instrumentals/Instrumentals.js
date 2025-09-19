@@ -6,31 +6,36 @@ const tracks = [
     image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/c5019a4e-3636-4553-9a59-e2122e5cb242/normans.png?content-type=image%2Fpng",
     title: "normans medecine circle",
     trackNumber: 1,
-    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/01-normans%20medecine%20circle%20-%201_22_23%2C%209.08%20PM.m4a"
+    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/01-normans%20medecine%20circle%20-%201_22_23%2C%209.08%20PM.m4a",
+    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/01-normans%20medecine%20circle%20-%201_22_23%2C%209.08%20PM.m4a"
   },
   {
     image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/335cf6bb-69ed-4ce5-afd4-fe931ccf3df6/alchemize.png?content-type=image%2Fpng",
     title: "alchemizemysuffering",
     trackNumber: 2,
-    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/02-alchemizemysuffering%20-%206_10_25%2C%206.30%20PM.m4a"
+    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/02-alchemizemysuffering%20-%206_10_25%2C%206.30%20PM.m4a",
+    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/02-alchemizemysuffering%20-%206_10_25%2C%206.30%20PM.m4a"
   },
   {
     image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/306dfe6b-7383-4834-b090-85bc4dd92ce2/mexique.png?content-type=image%2Fpng",
     title: "mexique",
     trackNumber: 3,
-    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/03-mexique.m4a"
+    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/03-mexique.m4a",
+    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/03-mexique.m4a"
   },
   {
     image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/fd21f409-991e-40d7-a69a-0286fd1ca694/sunkil.png?content-type=image%2Fpng",
     title: "sunkilhank",
     trackNumber: 4,
-    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/05-sunkilhank.m4a"
+    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/05-sunkilhank.m4a",
+    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/05-sunkilhank.m4a"
   },
   {
     image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/6cd27898-b349-475b-80d3-20e8ff303597/highschool.png?content-type=image%2Fpng",
     title: "buy a girls highschoolV2",
     trackNumber: 5,
-    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/buy%20a%20girls%20highschoolV2.m4a"
+    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/buy%20a%20girls%20highschoolV2.m4a",
+    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/buy%20a%20girls%20highschoolV2.m4a"
   }
 ]
 
@@ -52,23 +57,55 @@ class Instrumentals extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentlyPlaying: null
+      currentlyPlaying: null,
+      isMobile: this.detectMobile()
     };
     this.audioRefs = {};
+    this.htmlAudioRefs = {};
   }
 
-  playTrack = (albumIndex, trackPlayerUrl) => {
-    const { currentlyPlaying } = this.state;
-    const trackKey = `${albumIndex}-${trackPlayerUrl}`;
+  detectMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
+  playTrack = (albumIndex, track) => {
+    const { currentlyPlaying, isMobile } = this.state;
+    const trackKey = `${albumIndex}-${track.trackNumber}`;
+
+    // Stop any currently playing track
+    if (currentlyPlaying) {
+      if (isMobile) {
+        Object.values(this.htmlAudioRefs).forEach(audio => {
+          if (audio) {
+            audio.pause();
+            audio.currentTime = 0;
+          }
+        });
+      } else {
+        if (this.audioRefs[albumIndex]) {
+          this.audioRefs[albumIndex].src = track.playerUrl;
+        }
+      }
+    }
 
     if (currentlyPlaying === trackKey) {
-      if (this.audioRefs[albumIndex]) {
-        this.audioRefs[albumIndex].src = trackPlayerUrl;
-      }
       this.setState({ currentlyPlaying: null });
     } else {
-      if (this.audioRefs[albumIndex]) {
-        this.audioRefs[albumIndex].src = `${trackPlayerUrl}?auto=1&autoplay=1`;
+      if (isMobile) {
+        const audioElement = this.htmlAudioRefs[trackKey];
+        if (audioElement) {
+          console.log('Playing track:', track.title, 'URL:', track.audioUrl);
+          audioElement.play().catch(e => {
+            console.log('Audio play failed for track:', track.title, 'Error:', e);
+            console.log('Audio element src:', audioElement.src);
+          });
+        } else {
+          console.log('Audio element not found for track:', trackKey);
+        }
+      } else {
+        if (this.audioRefs[albumIndex]) {
+          this.audioRefs[albumIndex].src = `${track.playerUrl}?auto=1&autoplay=1`;
+        }
       }
       this.setState({ currentlyPlaying: trackKey });
     }
@@ -76,7 +113,7 @@ class Instrumentals extends Component {
 
   render() {
     const allAlbums = albums_arr.flat();
-    const { currentlyPlaying } = this.state;
+    const { currentlyPlaying, isMobile } = this.state;
 
     const albumContainerStyle = {
       display: 'flex',
@@ -126,24 +163,28 @@ class Instrumentals extends Component {
         <style>{`
           @media (max-width: 768px) {
             .instrumentals .album-container {
-              flex-direction: column !important;
-              gap: 20px !important;
-              margin-bottom: 40px !important;
-            }
-            .instrumentals .album-image,
-            .instrumentals .track-image {
-              width: 100% !important;
-              height: auto !important;
-              max-width: 400px !important;
+              gap: 15px !important;
+              margin-bottom: 30px !important;
             }
             .instrumentals .album-image {
+              width: 150px !important;
+              height: 150px !important;
+            }
+            .instrumentals .track-image {
+              width: 150px !important;
               height: auto !important;
+            }
+            .instrumentals .image-column {
+              gap: 8px !important;
+            }
+            .instrumentals .tracklist-column {
+              gap: 4px !important;
             }
           }
         `}</style>
         {allAlbums.map((album, index) => (
           <div key={index} className="album-container" style={albumContainerStyle}>
-            <div style={imageColumnStyle}>
+            <div className="image-column" style={imageColumnStyle}>
               <img
                 src={album.cover}
                 alt="Album Cover"
@@ -158,41 +199,55 @@ class Instrumentals extends Component {
               />
             </div>
 
-            <div style={tracklistColumnStyle}>
+            <div className="tracklist-column" style={tracklistColumnStyle}>
               {album.tracks.map((track, trackIndex) => {
-                const trackKey = `${index}-${track.playerUrl}`;
+                const trackKey = `${index}-${track.trackNumber}`;
                 const isPlaying = currentlyPlaying === trackKey;
 
                 return (
-                  <img
-                    key={trackIndex}
-                    src={track.image}
-                    alt={track.title}
-                    className="track-image"
-                    onClick={() => this.playTrack(index, track.playerUrl)}
-                    style={getTrackStyle(isPlaying)}
-                    title={track.title}
-                  />
+                  <div key={trackIndex}>
+                    <img
+                      src={track.image}
+                      alt={track.title}
+                      className="track-image"
+                      onClick={() => this.playTrack(index, track)}
+                      style={getTrackStyle(isPlaying)}
+                      title={track.title}
+                    />
+                    {isMobile && (
+                      <audio
+                        ref={ref => this.htmlAudioRefs[trackKey] = ref}
+                        preload="metadata"
+                        style={{ display: 'none' }}
+                        src={track.audioUrl}
+                        onError={(e) => console.log('Audio error for', track.title, ':', e)}
+                        onLoadStart={() => console.log('Loading started for', track.title)}
+                        onCanPlay={() => console.log('Can play', track.title)}
+                      />
+                    )}
+                  </div>
                 );
               })}
             </div>
 
-            <iframe
-              ref={ref => this.audioRefs[index] = ref}
-              src={album.player}
-              width="1"
-              height="1"
-              frameBorder="0"
-              style={{
-                position: 'absolute',
-                left: '-9999px',
-                opacity: 0,
-                pointerEvents: 'none'
-              }}
-              webkitallowfullscreen="true"
-              mozallowfullscreen="true"
-              allowFullScreen
-            />
+            {!isMobile && (
+              <iframe
+                ref={ref => this.audioRefs[index] = ref}
+                src={album.player}
+                width="1"
+                height="1"
+                frameBorder="0"
+                style={{
+                  position: 'absolute',
+                  left: '-9999px',
+                  opacity: 0,
+                  pointerEvents: 'none'
+                }}
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                allowFullScreen
+              />
+            )}
           </div>
         ))}
       </div>
