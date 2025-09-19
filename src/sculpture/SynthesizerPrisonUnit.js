@@ -9,7 +9,6 @@ const imgs = [
       "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/adfa0348-6330-4c5d-8f42-99c44eaa673b/print0005.jpg?content-type=image%2Fjpeg",
       "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/9bb8acf8-4387-421b-8c08-16b372225519/print0003.jpg?content-type=image%2Fjpeg",
       "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/f4f833f2-8fdb-4d5f-8514-1dabd371c26a/print0002.jpg?content-type=image%2Fjpeg",
-      "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/f04ee6c3-aee5-449d-bf6f-0e448a01fdc3/print0006.jpg?content-type=image%2Fjpeg",
 ];
 
 class SynthesizerPrisonUnit extends Component {

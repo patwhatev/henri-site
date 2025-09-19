@@ -37,7 +37,7 @@ class Chaises extends Component {
   }
 
   render() {
-    const { isMobile, loadedImages } = this.state;
+    const { isMobile, loadedImages } = this.state; 
     const formatParam = isMobile ? "?format=100w" : "?format=2500w";
 
     return (
