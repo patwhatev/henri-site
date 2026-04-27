@@ -61,6 +61,16 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 
 ### Deployment
 
+To deploy to GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+This runs `npm run build` first (via the `predeploy` script), then publishes the `build` folder to the `gh-pages` branch using the `gh-pages` package. The site will be live at the `homepage` URL defined in `package.json`.
+
+---
+
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
 ### `npm run build` fails to minify
