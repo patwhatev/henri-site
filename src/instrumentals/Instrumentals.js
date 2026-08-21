@@ -6,36 +6,36 @@ const tracks = [
     image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/c5019a4e-3636-4553-9a59-e2122e5cb242/normans.png?content-type=image%2Fpng",
     title: "normans medecine circle",
     trackNumber: 1,
-    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/01-normans%20medecine%20circle%20-%201_22_23%2C%209.08%20PM.m4a",
-    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/01-normans%20medecine%20circle%20-%201_22_23%2C%209.08%20PM.m4a"
+    playerUrl: "https://archive.org/embed/porcelain-trays-2/01-normans%20medecine%20circle%20-%201_22_23%2C%209.08%20PM.m4a",
+    audioUrl: "https://archive.org/download/porcelain-trays-2/01-normans%20medecine%20circle%20-%201_22_23%2C%209.08%20PM.m4a"
   },
   {
     image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/335cf6bb-69ed-4ce5-afd4-fe931ccf3df6/alchemize.png?content-type=image%2Fpng",
     title: "alchemizemysuffering",
     trackNumber: 2,
-    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/02-alchemizemysuffering%20-%206_10_25%2C%206.30%20PM.m4a",
-    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/02-alchemizemysuffering%20-%206_10_25%2C%206.30%20PM.m4a"
+    playerUrl: "https://archive.org/embed/porcelain-trays-2/02-alchemizemysuffering%20-%206_10_25%2C%206.30%20PM.m4a",
+    audioUrl: "https://archive.org/download/porcelain-trays-2/02-alchemizemysuffering%20-%206_10_25%2C%206.30%20PM.m4a"
   },
   {
     image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/306dfe6b-7383-4834-b090-85bc4dd92ce2/mexique.png?content-type=image%2Fpng",
     title: "mexique",
     trackNumber: 3,
-    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/03-mexique.m4a",
-    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/03-mexique.m4a"
+    playerUrl: "https://archive.org/embed/porcelain-trays-2/03-mexique.m4a",
+    audioUrl: "https://archive.org/download/porcelain-trays-2/03-mexique.m4a"
   },
   {
     image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/6cd27898-b349-475b-80d3-20e8ff303597/highschool.png?content-type=image%2Fpng",
     title: "buy a girls highschoolV2",
     trackNumber: 4,
-    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/buy%20a%20girls%20highschoolV2.m4a",
-    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/buy%20a%20girls%20highschoolV2.m4a"
+    playerUrl: "https://archive.org/embed/porcelain-trays-2/buy%20a%20girls%20highschoolV2.m4a",
+    audioUrl: "https://archive.org/download/porcelain-trays-2/buy%20a%20girls%20highschoolV2.m4a"
   },
   {
     image: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/fd21f409-991e-40d7-a69a-0286fd1ca694/sunkil.png?content-type=image%2Fpng",
     title: "sunkilhank",
     trackNumber: 5,
-    playerUrl: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm/05-sunkilhank.m4a",
-    audioUrl: "https://archive.org/download/normans-medecine-circle-1-22-23-9.08-pm/05-sunkilhank.m4a"
+    playerUrl: "https://archive.org/embed/porcelain-trays-2/05-sunkilhank.m4a",
+    audioUrl: "https://archive.org/download/porcelain-trays-2/05-sunkilhank.m4a"
   },
 
 ]
@@ -44,7 +44,7 @@ const porcelain_trays = {
   cover: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/128ec8c7-c217-4a1f-8d83-b26e58abb9c4/Cover_01.jpg?content-type=image%2Fjpeg",
   back: "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/11471b97-d5d0-4119-8a47-1a90cf5a5301/Cover_02.jpg?content-type=image%2Fjpeg",
   tracks: tracks,
-  player: "https://archive.org/embed/normans-medecine-circle-1-22-23-9.08-pm"
+  player: "https://archive.org/embed/porcelain-trays-2"
 }
 
 // const swiss_toys = {
