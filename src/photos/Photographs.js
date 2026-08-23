@@ -11,6 +11,21 @@ import Paris from "./Paris";
 
 const blank_landscape = "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/719bc236-a977-4ba8-b413-41e3b40db5f8/blank+landscape.png?content-type=image%2Fpng"
 
+const new_1 = [
+  blank_landscape,
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/99eec5ff-fd54-42e9-a6ba-d3b2f649e6f1/IMG_5991+copy.png?content-type=image%2Fpng",
+  blank_landscape,
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/a20a8aa4-3b83-4c96-a4b1-66d15815b13d/6f027-13.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/c1ef8820-4bd7-44ef-b249-d0c4000b3d0f/e40d8-17.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/958bee4a-bb20-4a77-975b-17c2830b1437/e40d8-09.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/77a735b9-035f-4ef4-8e7a-bdefa48d197a/IMG_0716.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/893c9ed6-d496-4151-ae15-1b6dca35c6ad/IMG_0707+copy.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/161d4616-8d95-4c4e-a4a2-5854f97a8d1b/IMG_0705.png?content-type=image%2Fpng",
+  blank_landscape,
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/f2d80de4-8705-46b1-bff0-ce9ef3891500/IMG_0700.png?content-type=image%2Fpng",
+  blank_landscape
+]
+
 const cross = [
   blank_landscape,
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/341cde87-640d-46e4-bfe0-03e0be7daf25/cross_04.jpg?content-type=image%2Fjpeg",
@@ -105,7 +120,7 @@ const page4 = [
   "https://static1.squarespace.com/static/5ad4d6c7a2772c84c876a433/5d9bfe1d891ec13e8f7d9642/5d9bfea018af836bfce96563/1570504363436/WEBSITE+COVER+PHOTO.TIF-7.png?format=1500w"
 ];
 
-const imgs = [cross, page1, page2, page3, page4]
+const imgs = [new_1, cross, page1, page2, page3, page4]
 // Note - this page does not have a nav
 
 class Photographs extends Component {

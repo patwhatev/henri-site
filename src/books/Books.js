@@ -6,6 +6,15 @@ import Dictatorship from "./Dictatorship";
 // Import other book sub-components here
 
 
+const new_1 = [
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/50e2f8e5-bce6-4361-a0f3-2c450628fc3a/FW26+INVITE_03.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/73013ad1-6616-4fe3-bbf5-765dee5cf3a5/FW26+INVITE_11.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/63d9760f-8339-43e7-a5af-073daf27fb71/FW26+INVITE_10.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/c31942ff-e24c-4595-8854-a0b1c14bf72e/FW26+INVITE_16.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/ec18c11c-3d30-4cac-8267-4caf13620195/FW26+INVITE_04.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/a8e7e468-3576-41e3-b58f-5c1b7a4d117d/FW26+INVITE_20.png?content-type=image%2Fpng",
+];
+
 const dictatorship = [
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/563c91c6-6f1f-4854-9446-f209601a0bff/Invite1.png?content-type=image%2Fpng",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/e73cc940-fcf2-4fab-b72c-99a7a852326c/Invite3.png?content-type=image%2Fpng",
@@ -45,7 +54,7 @@ const reverse_keith = [
 
 
 
-const books_arr = [dictatorship, christaine, reverse_keith, invite_24, ah_19_invite, pe_18_zine]
+const books_arr = [new_1, dictatorship, christaine, reverse_keith, invite_24, ah_19_invite, pe_18_zine]
 
 class Books extends Component {
   constructor(props) {
