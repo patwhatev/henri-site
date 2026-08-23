@@ -39,7 +39,7 @@ class Home extends Component {
       const show_info = "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/94988cb5-1c67-4d31-b102-96c975c48314/Russia+Show+Info.jpg?content-type=image%2Fjpeg";
       
       return (
-      <div>
+      <div className="home-page">
         <div className="image-container">
           <img
             src={`${x_home}${formatParam}`}

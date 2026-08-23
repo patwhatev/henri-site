@@ -329,6 +329,16 @@ img {
     max-width: 100%;
   }
 
+  /* Home page only: widen the content column and add top space so the
+     hero image (fixed aspect ratio) renders taller on small phones */
+  .content:has(.home-page) {
+    width: 95%;
+  }
+
+  .home-page {
+    padding-top: 35px;
+  }
+
   /* Adjust body padding for mobile */
   body {
     padding: 15px;
