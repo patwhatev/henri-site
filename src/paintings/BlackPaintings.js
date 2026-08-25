@@ -3,12 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from "react";
 
 const imgs = [
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/fb3ff788-071e-46e2-870d-16443dd6e13e/_2PT6678+copy.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/a434d780-ee4e-443c-b637-3ebd4dbd7c0d/_2PT6635+copy.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/af66707b-a2dc-4239-bab8-97f17373d3d8/_2PT9982+copy.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/d3c03bea-095f-4018-9471-3d9d98dfb859/_2PT9930+copy.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/fa0d4ab9-e291-4f94-ab9d-f12969104172/_2PT6648+copy.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/27f15ca3-13a7-4d6a-9a6e-39be615b5af4/_2PW0085-Pano+copy.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/26941f60-884e-4f81-a94e-093d95568d45/_2PT6678+copy+1.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/d87afd32-9066-4fa0-992c-4413a49a8a93/_2PT6635+copy.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/fd9f0298-fccc-4d7c-9699-c690fe74f017/_2PT9982+copy.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/e45e1c85-dd38-4ded-85c3-ca8d43052e31/_2PT9930+copy.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/6cdd53f5-1def-412f-ac85-664b037b2d7f/Black+Paintings_03+copy.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/a5e9d72f-f2b5-4643-8c1d-a6ae398d22e9/_2PW0085-Pano+copy.png?content-type=image%2Fpng",
+  // older 
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/cc4dd351-c1e5-47e9-beed-997bef749647/Black+Paintings_01.jpg?content-type=image%2Fjpeg",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/dcab4599-311c-4e8b-bae0-c03d9b1cad8e/Black+Paintings_02.jpg?content-type=image%2Fjpeg",
   // "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/9d3676f4-bbff-4c16-9cba-4448e135cd79/Black+Paintings_03.jpg?content-type=image%2Fjpeg",
@@ -72,7 +73,7 @@ class BlackPaintings extends Component {
     //   );
     // }
 
-    return (
+   return (
       <div>
         <Carousel>
           {imgs.map((image, index) => {
@@ -88,7 +89,7 @@ class BlackPaintings extends Component {
                     onLoad={() => this.handleImageLoad(fullImageUrl)}
                   />
                 </div>
-            </Carousel.Item>
+              </Carousel.Item>
             );
           })}
         </Carousel>

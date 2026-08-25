@@ -3,11 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from "react";
 
 const new_1 = [
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/0f773149-e688-48d7-bbc2-0a8be0b714af/white+painting+with+baby+trams.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/f794c34b-f548-4bf1-b8a8-f1d143732f12/_2PW0099+copy.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/8ed7c8bb-bc65-4bf1-88e4-b30c2a22baf5/_2PT6711+copy.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/b3b32a81-1031-4639-963a-d269b2abc42d/_2PT6688+copy2.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/bb098498-ec3e-4c88-a037-da11633e6eed/_2PT9987+copy.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/b7e993ea-50ad-4012-b483-4d39eae10c7e/white+painting+with+baby+trams.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/1f771f70-4547-4b8d-8b3e-10db54047edb/_2PW0099+copy.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/adda3891-aac0-4c76-9276-5656ff9484d0/_2PT6711+copy.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/270eed78-dddb-40c0-90ec-bb0aa5dbae96/_2PT6688+copy2.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/7a6f073c-b4ef-4444-88d7-e3f3b1616565/_2PT9987+copy.png?content-type=image%2Fpng",
 ];
 
 const assemblage_1 = [
