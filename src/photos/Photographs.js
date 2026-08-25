@@ -16,7 +16,7 @@ const new_1 = [
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/99eec5ff-fd54-42e9-a6ba-d3b2f649e6f1/IMG_5991+copy.png?content-type=image%2Fpng",
   blank_landscape,
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/a20a8aa4-3b83-4c96-a4b1-66d15815b13d/6f027-13.png?content-type=image%2Fpng",
-  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/c1ef8820-4bd7-44ef-b249-d0c4000b3d0f/e40d8-17.png?content-type=image%2Fpng",
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/df796fac-f3e6-4b4b-b735-df520661c633/e40d8-09+copy.jpg?content-type=image%2Fjpeg",  
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/958bee4a-bb20-4a77-975b-17c2830b1437/e40d8-09.png?content-type=image%2Fpng",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/77a735b9-035f-4ef4-8e7a-bdefa48d197a/IMG_0716.png?content-type=image%2Fpng",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/893c9ed6-d496-4151-ae15-1b6dca35c6ad/IMG_0707+copy.png?content-type=image%2Fpng",
