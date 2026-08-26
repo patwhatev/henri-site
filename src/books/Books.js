@@ -7,6 +7,7 @@ import Dictatorship from "./Dictatorship";
 
 
 const new_1 = [
+  "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/394609d1-07b5-4f01-aabe-88b8ab001c53/FinalAcheivementIsRuinPoster+copy.png?content-type=image%2Fpng",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/50e2f8e5-bce6-4361-a0f3-2c450628fc3a/FW26+INVITE_03.png?content-type=image%2Fpng",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/73013ad1-6616-4fe3-bbf5-765dee5cf3a5/FW26+INVITE_11.png?content-type=image%2Fpng",
   "https://images.squarespace-cdn.com/content/53667a41e4b0e77173cb3dd1/63d9760f-8339-43e7-a5af-073daf27fb71/FW26+INVITE_10.png?content-type=image%2Fpng",
